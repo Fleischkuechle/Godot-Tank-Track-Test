@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjhxo10onve6k"]
+
+[ext_resource type="PackedScene" uid="uid://7y04cohul3up" path="res://Track/TankTrackPath3D_Original_Template.tscn" id="1_jdlo4"]
+
+[node name="TankTrackPath3D_new_001" instance=ExtResource("1_jdlo4")]

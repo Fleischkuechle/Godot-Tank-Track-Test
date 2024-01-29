@@ -136,5 +136,4 @@ cam_rotate_right={
 
 [rendering]
 
-environment/defaults/default_environment="res://default_env.tres"
 quality/filters/msaa=2

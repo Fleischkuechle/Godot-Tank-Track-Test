@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://pcsfjyv4kc1c"
-path="res://.godot/imported/tanktracktest.blend-a672140eabb3f41674d815edf75fa2f1.scn"
+uid="uid://dsbwr8rm3e6qo"
+path="res://.godot/imported/scifiCar.blend-62b66d1204ae641513291c3365524db0.scn"
 
 [deps]
 
-source_file="res://assets/tanktracktest.blend"
-dest_files=["res://.godot/imported/tanktracktest.blend-a672140eabb3f41674d815edf75fa2f1.scn"]
+source_file="res://BlenderFiles/scifiCar.blend"
+dest_files=["res://.godot/imported/scifiCar.blend-62b66d1204ae641513291c3365524db0.scn"]
 
 [params]
 
