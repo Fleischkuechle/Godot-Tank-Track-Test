@@ -1,0 +1,359 @@
+[gd_scene load_steps=13 format=3 uid="uid://jyafpcrp2e0t"]
+
+[ext_resource type="Script" path="res://LeftThread.gd" id="1_miyrl"]
+[ext_resource type="Script" path="res://LeftThread_Path3D.gd" id="2_07ms7"]
+[ext_resource type="PackedScene" uid="uid://b13h1w0treed" path="res://base_thread.tscn" id="5_8ddbd"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_m0kwc"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_ifsfg"]
+sky_material = SubResource("ProceduralSkyMaterial_m0kwc")
+
+[sub_resource type="Environment" id="Environment_72i7t"]
+background_mode = 2
+sky = SubResource("Sky_ifsfg")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="Curve3D" id="Curve3D_nct0e"]
+_data = {
+"points": PackedVector3Array(-0.242324, 0.00237571, 0, 0.242324, -0.00237571, 0, 0.015, 0.022, 0, -0.282712, -0.00237572, 0, 0.282712, 0.00237572, 0, 0.989162, 0.028618, 0, -0.0855263, -0.0641448, 0, 0.0855263, 0.0641448, 0, 1.54508, 0.114144, 0, 0.00475132, -0.109284, 0, -0.00475132, 0.109284, 0, 1.62823, 0.387354, 0, 0.0688962, -0.0522662, 0, -0.0688962, 0.0522662, 0, 1.53796, 0.639181, 0, 0.177639, -0.0206423, 0.0244236, -0.177639, 0.0206423, -0.0244236, 1.08302, 0.812909, -0.0601759, 0.778544, -0.0960011, 4.45843e-05, -0.778544, 0.0960011, -4.45843e-05, -0.075054, 0.890354, 0.0574675, -0.00646424, 0.326448, 0, 0.00646424, -0.326448, 0, -1.98754, 0.616118, -0.0102839, -0.262, 0.01, 0, 0.262, -0.01, 0, -1.413, 0.114, 0, -0.1, 0, 0, 0.1, 0, 0, -0.68, 0.071, 0, -0.176629, -0.000894755, 0, 0.176629, 0.000894755, 0, 0.012, 0.022, 0),
+"tilts": PackedFloat32Array(0, -0.261799, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 11
+
+[sub_resource type="BoxMesh" id="BoxMesh_exywo"]
+size = Vector3(0.2, 0.1, 0.3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_801it"]
+albedo_color = Color(0.262745, 0.694118, 0.913725, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_546if"]
+material = SubResource("StandardMaterial3D_801it")
+size = Vector3(-0.29, 0.05, 0.05)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6ct2y"]
+size = Vector3(0.245, 0.06, 0.2)
+
+[sub_resource type="MultiMesh" id="MultiMesh_tiw8h"]
+transform_format = 1
+instance_count = 18
+mesh = SubResource("BoxMesh_6ct2y")
+buffer = PackedFloat32Array(-0.000359717, -0.00401276, -0.999985, 0.229985, 0.0654832, 0.997846, -0.00549319, 0.0216989, 0.997854, -0.0654842, 0, 0, -0.00184465, -0.0103427, -0.999943, 0.660382, 0.172575, 0.98494, -0.0106884, 0.0252701, 0.984995, -0.172585, 0, 0, -0.00835658, -0.0307752, -0.999315, 1.08742, 0.225705, 0.973674, -0.036999, 0.0305587, 0.97416, -0.225856, 0, 0, -0.0195026, -0.485016, -0.71149, 1.51351, 0.0197466, 0.874097, -0.702697, 0.091378, 0.999615, -0.0267298, 0, 0, 0.000580258, -0.977463, 0.348658, 1.61917, -0.00268626, -0.211107, -0.937246, 0.486875, 0.999996, 9.13567e-08, -0.00272001, 0, -0.123344, -0.35586, 0.938272, 1.31522, 0.0721434, -0.934237, -0.316307, 0.752136, 0.989738, 0.0237496, 0.139986, -0.0261694, 0.213418, -0.00194396, 0.976956, 0.893277, 0.0531298, -0.998495, -0.00831126, 0.821009, 0.975515, 0.0548067, -0.21328, -0.0449628, 0.111533, -0.0605671, 0.991614, 0.468413, 0.057512, -0.996075, -0.0720236, 0.836522, 0.992095, 0.0645518, -0.107304, 0.0289577, 0.0191683, -0.111782, 0.99289, 0.0461778, 0.0663503, -0.991398, -0.118508, 0.875973, 0.997612, 0.0680848, -0.0111957, 0.0562635, -0.0153883, -0.0702554, 0.997914, -0.382253, 0.0699064, -0.995163, -0.0614773, 0.919608, 0.997435, 0.0686633, 0.0197044, 0.0545221, -0.0341446, -0.00463642, 0.999411, -0.811979, 0.0704636, -0.997512, 0.00581746, 0.935139, 0.99693, 0.0703459, 0.0338184, 0.0434922, -0.0501252, 0.0789054, 0.994594, -1.24199, 0.0697159, -0.994166, 0.0943167, 0.919408, 0.996307, 0.0735359, 0.0434393, 0.0272185, -0.0700792, 0.249355, 0.961309, -1.66663, 0.0661033, -0.964965, 0.270953, 0.853899, 0.995349, 0.0816417, 0.049688, 0.00731959, -0.123243, 0.991877, -0.136593, -1.98816, -0.0129359, 0.0301302, 0.990619, 0.611167, 0.992292, 0.123584, -0.00405077, -0.0103324, -0.0744063, 0.592958, -0.848911, -1.79264, -0.0853922, 0.797275, 0.528224, 0.243776, 0.993565, 0.112928, -0.0181751, -0.00506249, -0.00426313, 0.0411484, -0.999064, -1.39007, -0.105365, 0.993573, 0.0432515, 0.112531, 0.994425, 0.105451, 0.000299713, 2.99455e-05, -0.00721669, 0.0672973, -0.997655, -0.964035, -0.105204, 0.992145, 0.0684365, 0.0872694, 0.994425, 0.105451, 0, 0, -0.00937311, 0.0835515, -0.996042, -0.533887, -0.105035, 0.990908, 0.0888849, 0.0615389, 0.994424, 0.105451, 0, 0)
+
+[node name="TankThreadTest" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.433012, 0.216503, 0.875001, 0.749998, 0.625002, 0.216507, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_72i7t")
+
+[node name="LeftThread" type="Node3D" parent="."]
+visible = false
+script = ExtResource("1_miyrl")
+speed = 1.0
+
+[node name="LeftThread_Path3D" type="Path3D" parent="LeftThread" node_paths=PackedStringArray("mm_instance_3D")]
+visible = false
+curve = SubResource("Curve3D_nct0e")
+script = ExtResource("2_07ms7")
+distance_between_planks = 0.43
+mm_instance_3D = NodePath("../MultiMeshInstance3D2")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="LeftThread/LeftThread_Path3D"]
+transform = Transform3D(-0.106466, 0.738905, 0.665089, 0.0437345, -0.664761, 0.745547, 0.993188, 0.10848, 0.038465, -1.94521, 0.718899, -0.00771868)
+progress = 5.68831
+
+[node name="LinkDummyMeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D"]
+transform = Transform3D(-4.37098e-08, -2.32831e-10, 1, -0.00689637, 0.999976, -6.86135e-11, -0.999976, -0.00689637, -4.37103e-08, -3.83183e-11, -0.063517, 7.41717e-06)
+mesh = SubResource("BoxMesh_exywo")
+skeleton = NodePath("../../..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D"]
+transform = Transform3D(1, -1.35525e-20, -1.73472e-18, 0, 1, 7.11232e-26, 0, 7.11232e-26, 1, 5.29396e-22, -0.12899, 0.000889582)
+mesh = SubResource("BoxMesh_546if")
+
+[node name="PathFollow3D2" type="PathFollow3D" parent="LeftThread/LeftThread_Path3D"]
+transform = Transform3D(-0.119128, 0.944782, -0.304731, -0.0288277, 0.303496, 0.952221, 0.992293, 0.122241, -0.00892046, -1.96535, 0.479161, -0.0096546)
+progress = 5.93831
+
+[node name="LinkDummyMeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D2"]
+transform = Transform3D(-4.37098e-08, -2.32831e-10, 1, -0.00689637, 0.999976, -6.86135e-11, -0.999976, -0.00689637, -4.37103e-08, -3.83183e-11, -0.063517, 7.41717e-06)
+mesh = SubResource("BoxMesh_exywo")
+skeleton = NodePath("../../..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D2"]
+transform = Transform3D(1, -1.35525e-20, -1.73472e-18, 0, 1, 7.11232e-26, 0, 7.11232e-26, 1, 5.29396e-22, -0.12899, 0.000889582)
+mesh = SubResource("BoxMesh_546if")
+
+[node name="PathFollow3D3" type="PathFollow3D" parent="LeftThread/LeftThread_Path3D"]
+transform = Transform3D(-0.0898465, 0.660543, -0.744989, -0.0732943, 0.741603, 0.666373, 0.992957, 0.114509, -0.0182216, -1.82885, 0.2733, -0.00592782)
+progress = 6.18831
+
+[node name="LinkDummyMeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D3"]
+transform = Transform3D(-4.37098e-08, -2.32831e-10, 1, -0.00689637, 0.999976, -6.86135e-11, -0.999976, -0.00689637, -4.37103e-08, -3.83183e-11, -0.063517, 7.41717e-06)
+mesh = SubResource("BoxMesh_exywo")
+skeleton = NodePath("../../../ParentForPathNode3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D3"]
+transform = Transform3D(1, -1.35525e-20, -1.73472e-18, 0, 1, 7.11232e-26, 0, 7.11232e-26, 1, 5.29396e-22, -0.12899, 0.000889582)
+mesh = SubResource("BoxMesh_546if")
+
+[node name="PathFollow3D4" type="PathFollow3D" parent="LeftThread/LeftThread_Path3D"]
+transform = Transform3D(-0.0473888, 0.315129, -0.947546, -0.0975779, 0.942617, 0.318366, 0.993805, 0.107579, -0.0139238, -1.61253, 0.150814, -0.00160883)
+progress = 6.43831
+
+[node name="LinkDummyMeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D4"]
+transform = Transform3D(-4.37098e-08, -2.32831e-10, 1, -0.00689637, 0.999976, -6.86135e-11, -0.999976, -0.00689637, -4.37103e-08, -3.83183e-11, -0.063517, 7.41717e-06)
+mesh = SubResource("BoxMesh_exywo")
+skeleton = NodePath("../../../ParentForPathNode3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D4"]
+transform = Transform3D(1, -1.35525e-20, -1.73472e-18, 0, 1, 7.11232e-26, 0, 7.11232e-26, 1, 5.29396e-22, -0.12899, 0.000889582)
+mesh = SubResource("BoxMesh_546if")
+skeleton = NodePath("../../PathFollow3D3")
+
+[node name="PathFollow3D5" type="PathFollow3D" parent="LeftThread/LeftThread_Path3D"]
+transform = Transform3D(-0.00470404, 0.0443597, -0.998702, -0.105314, 0.993137, 0.0446083, 0.994126, 0.105419, -4.36546e-08, -1.36699, 0.111515, 2.99275e-05)
+progress = 6.68831
+
+[node name="LinkDummyMeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D5"]
+transform = Transform3D(-4.37098e-08, -2.32831e-10, 1, -0.00689637, 0.999976, -6.86135e-11, -0.999976, -0.00689637, -4.37103e-08, -3.83183e-11, -0.063517, 7.41717e-06)
+mesh = SubResource("BoxMesh_exywo")
+skeleton = NodePath("../../../ParentForPathNode3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D5"]
+transform = Transform3D(1, -1.35525e-20, -1.73472e-18, 0, 1, 7.11232e-26, 0, 7.11232e-26, 1, 5.29396e-22, -0.12899, 0.000889582)
+mesh = SubResource("BoxMesh_546if")
+skeleton = NodePath("../../PathFollow3D3")
+
+[node name="PathFollow3D6" type="PathFollow3D" parent="LeftThread/LeftThread_Path3D"]
+transform = Transform3D(-0.00689667, 0.0650368, -0.997559, -0.105194, 0.992, 0.0654013, 0.994128, 0.10542, -4.36047e-08, -1.1167, 0.0976114, 0)
+progress = 6.93831
+
+[node name="LinkDummyMeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D6"]
+transform = Transform3D(-4.37098e-08, -2.32831e-10, 1, -0.00689637, 0.999976, -6.86135e-11, -0.999976, -0.00689637, -4.37103e-08, -3.83183e-11, -0.063517, 7.41717e-06)
+mesh = SubResource("BoxMesh_exywo")
+skeleton = NodePath("../../../ParentForPathNode3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D6"]
+transform = Transform3D(1, -1.35525e-20, -1.73472e-18, 0, 1, 7.11232e-26, 0, 7.11232e-26, 1, 5.29396e-22, -0.12899, 0.000889582)
+mesh = SubResource("BoxMesh_546if")
+skeleton = NodePath("../../PathFollow3D3")
+
+[node name="PathFollow3D7" type="PathFollow3D" parent="LeftThread/LeftThread_Path3D"]
+transform = Transform3D(-0.00674343, 0.0635928, -0.997652, -0.105204, 0.992094, 0.0639491, 0.994128, 0.10542, 7.53206e-08, -0.86592, 0.0805273, 0)
+progress = 7.18831
+
+[node name="LinkDummyMeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D7"]
+transform = Transform3D(-4.37098e-08, -2.32831e-10, 1, -0.00689637, 0.999976, -6.86135e-11, -0.999976, -0.00689637, -4.37103e-08, -3.83183e-11, -0.063517, 7.41717e-06)
+mesh = SubResource("BoxMesh_exywo")
+skeleton = NodePath("../../../ParentForPathNode3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D7"]
+transform = Transform3D(1, -1.35525e-20, -1.73472e-18, 0, 1, 7.11232e-26, 0, 7.11232e-26, 1, 5.29396e-22, -0.12899, 0.000889582)
+mesh = SubResource("BoxMesh_546if")
+skeleton = NodePath("../../PathFollow3D3")
+
+[node name="PathFollow3D8" type="PathFollow3D" parent="LeftThread/LeftThread_Path3D"]
+transform = Transform3D(-0.00435704, 0.0410865, -0.998846, -0.105329, 0.993281, 0.0413167, 0.994126, 0.10542, -1.62733e-07, -0.622292, 0.0678741, 0)
+progress = 7.43831
+
+[node name="LinkDummyMeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D8"]
+transform = Transform3D(-4.37098e-08, -2.32831e-10, 1, -0.00689637, 0.999976, -6.86135e-11, -0.999976, -0.00689637, -4.37103e-08, -3.83183e-11, -0.063517, 7.41717e-06)
+mesh = SubResource("BoxMesh_exywo")
+skeleton = NodePath("../../../ParentForPathNode3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D8"]
+transform = Transform3D(1, -1.35525e-20, -1.73472e-18, 0, 1, 7.11232e-26, 0, 7.11232e-26, 1, 5.29396e-22, -0.12899, 0.000889582)
+mesh = SubResource("BoxMesh_546if")
+skeleton = NodePath("../../PathFollow3D3")
+
+[node name="PathFollow3D9" type="PathFollow3D" parent="LeftThread/LeftThread_Path3D"]
+transform = Transform3D(-0.00935893, 0.0882564, -0.995752, -0.105003, 0.990201, 0.0887512, 0.994126, 0.105419, -4.35257e-08, -0.367447, 0.0465814, 0)
+progress = 7.68831
+
+[node name="LinkDummyMeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D9"]
+transform = Transform3D(-4.37098e-08, -2.32831e-10, 1, -0.00689637, 0.999976, -6.86135e-11, -0.999976, -0.00689637, -4.37103e-08, -3.83183e-11, -0.063517, 7.41717e-06)
+mesh = SubResource("BoxMesh_exywo")
+skeleton = NodePath("../../../ParentForPathNode3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D9"]
+transform = Transform3D(1, -1.35525e-20, -1.73472e-18, 0, 1, 7.11232e-26, 0, 7.11232e-26, 1, 5.29396e-22, -0.12899, 0.000889582)
+mesh = SubResource("BoxMesh_546if")
+skeleton = NodePath("../../PathFollow3D3")
+
+[node name="PathFollow3D10" type="PathFollow3D" parent="LeftThread/LeftThread_Path3D"]
+transform = Transform3D(-0.00559629, 0.0527739, -0.99829, -0.105271, 0.992727, 0.0530696, 0.994129, 0.10542, -4.36366e-08, -0.120732, 0.0275004, 0)
+progress = 7.93831
+
+[node name="LinkDummyMeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D10"]
+transform = Transform3D(-4.37098e-08, -2.32831e-10, 1, -0.00689637, 0.999976, -6.86135e-11, -0.999976, -0.00689637, -4.37103e-08, -3.83183e-11, -0.063517, 7.41717e-06)
+mesh = SubResource("BoxMesh_exywo")
+skeleton = NodePath("../../../ParentForPathNode3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D10"]
+transform = Transform3D(1, -1.35525e-20, -1.73472e-18, 0, 1, 7.11232e-26, 0, 7.11232e-26, 1, 5.29396e-22, -0.12899, 0.000889582)
+mesh = SubResource("BoxMesh_546if")
+skeleton = NodePath("../../PathFollow3D3")
+
+[node name="PathFollow3D11" type="PathFollow3D" parent="LeftThread/LeftThread_Path3D"]
+transform = Transform3D(-1.22636e-05, 0.000321209, -0.9997, -0.0380046, 0.99898, 0.000321442, 0.998983, 0.0380045, -4.36658e-08, 0.132467, 0.0214911, 0)
+progress = 0.118439
+
+[node name="LinkDummyMeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D11"]
+transform = Transform3D(-4.37098e-08, -2.32831e-10, 1, -0.00689637, 0.999976, -6.86135e-11, -0.999976, -0.00689637, -4.37103e-08, -3.83183e-11, -0.063517, 7.41717e-06)
+mesh = SubResource("BoxMesh_exywo")
+skeleton = NodePath("../../../ParentForPathNode3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D11"]
+transform = Transform3D(1, -1.35525e-20, -1.73472e-18, 0, 1, 7.11232e-26, 0, 7.11232e-26, 1, 5.29396e-22, -0.12899, 0.000889582)
+mesh = SubResource("BoxMesh_546if")
+skeleton = NodePath("../../PathFollow3D3")
+
+[node name="PathFollow3D12" type="PathFollow3D" parent="LeftThread/LeftThread_Path3D"]
+transform = Transform3D(0.000808977, -0.00766134, -0.99967, -0.104964, 0.994147, -0.00770391, 0.994173, 0.104968, 7.56377e-08, 0.382985, 0.0226312, 0)
+progress = 0.368439
+
+[node name="LinkDummyMeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D12"]
+transform = Transform3D(-4.37098e-08, -2.32831e-10, 1, -0.00689637, 0.999976, -6.86135e-11, -0.999976, -0.00689637, -4.37103e-08, -3.83183e-11, -0.063517, 7.41717e-06)
+mesh = SubResource("BoxMesh_exywo")
+skeleton = NodePath("../../../ParentForPathNode3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D12"]
+transform = Transform3D(1, -1.35525e-20, -1.73472e-18, 0, 1, 7.11232e-26, 0, 7.11232e-26, 1, 5.29396e-22, -0.12899, 0.000889582)
+mesh = SubResource("BoxMesh_546if")
+skeleton = NodePath("../../PathFollow3D3")
+
+[node name="PathFollow3D13" type="PathFollow3D" parent="LeftThread/LeftThread_Path3D"]
+transform = Transform3D(0.00173316, -0.0102913, -0.999644, -0.165995, 0.98577, -0.0104362, 0.98582, 0.166005, 1.9438e-07, 0.633552, 0.0249877, 0)
+progress = 0.618439
+
+[node name="LinkDummyMeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D13"]
+transform = Transform3D(-4.37098e-08, -2.32831e-10, 1, -0.00689637, 0.999976, -6.86135e-11, -0.999976, -0.00689637, -4.37103e-08, -3.83183e-11, -0.063517, 7.41717e-06)
+mesh = SubResource("BoxMesh_exywo")
+skeleton = NodePath("../../../ParentForPathNode3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D13"]
+transform = Transform3D(1, -1.35525e-20, -1.73472e-18, 0, 1, 7.11232e-26, 0, 7.11232e-26, 1, 5.29396e-22, -0.12899, 0.000889582)
+mesh = SubResource("BoxMesh_546if")
+skeleton = NodePath("../../PathFollow3D3")
+
+[node name="PathFollow3D14" type="PathFollow3D" parent="LeftThread/LeftThread_Path3D"]
+transform = Transform3D(0.00229699, -0.00975727, -0.999649, -0.229062, 0.973055, -0.010024, 0.9731, 0.229075, 7.50927e-08, 0.883568, 0.0276216, 0)
+progress = 0.868439
+
+[node name="LinkDummyMeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D14"]
+transform = Transform3D(-4.37098e-08, -2.32831e-10, 1, -0.00689637, 0.999976, -6.86135e-11, -0.999976, -0.00689637, -4.37103e-08, -3.83183e-11, -0.063517, 7.41717e-06)
+mesh = SubResource("BoxMesh_exywo")
+skeleton = NodePath("../../../ParentForPathNode3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D14"]
+transform = Transform3D(1, -1.35525e-20, -1.73472e-18, 0, 1, 7.11232e-26, 0, 7.11232e-26, 1, 5.29396e-22, -0.12899, 0.000889582)
+mesh = SubResource("BoxMesh_546if")
+skeleton = NodePath("../../PathFollow3D3")
+
+[node name="PathFollow3D15" type="PathFollow3D" parent="LeftThread/LeftThread_Path3D"]
+transform = Transform3D(0.00879435, -0.040626, -0.998835, -0.211323, 0.976228, -0.0415668, 0.97707, 0.211507, 7.6496e-08, 1.13394, 0.0318514, 0)
+progress = 1.11844
+
+[node name="LinkDummyMeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D15"]
+transform = Transform3D(-4.37098e-08, -2.32831e-10, 1, -0.00689637, 0.999976, -6.86135e-11, -0.999976, -0.00689637, -4.37103e-08, -3.83183e-11, -0.063517, 7.41717e-06)
+mesh = SubResource("BoxMesh_exywo")
+skeleton = NodePath("../../../ParentForPathNode3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D15"]
+transform = Transform3D(1, -1.35525e-20, -1.73472e-18, 0, 1, 7.11232e-26, 0, 7.11232e-26, 1, 5.29396e-22, -0.12899, 0.000889582)
+mesh = SubResource("BoxMesh_546if")
+skeleton = NodePath("../../PathFollow3D3")
+
+[node name="PathFollow3D16" type="PathFollow3D" parent="LeftThread/LeftThread_Path3D"]
+transform = Transform3D(0.0211998, -0.193989, -0.980468, -0.106516, 0.97467, -0.195143, 0.993789, 0.108605, -4.2604e-08, 1.38592, 0.0555268, 0)
+progress = 1.36844
+
+[node name="LinkDummyMeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D16"]
+transform = Transform3D(-4.37098e-08, -2.32831e-10, 1, -0.00689637, 0.999976, -6.86135e-11, -0.999976, -0.00689637, -4.37103e-08, -3.83183e-11, -0.063517, 7.41717e-06)
+mesh = SubResource("BoxMesh_exywo")
+skeleton = NodePath("../../../ParentForPathNode3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D16"]
+transform = Transform3D(1, -1.35525e-20, -1.73472e-18, 0, 1, 7.11232e-26, 0, 7.11232e-26, 1, 5.29396e-22, -0.12899, 0.000889582)
+mesh = SubResource("BoxMesh_546if")
+skeleton = NodePath("../../PathFollow3D3")
+
+[node name="PathFollow3D17" type="PathFollow3D" parent="LeftThread/LeftThread_Path3D"]
+transform = Transform3D(-4.36983e-08, -0.851436, -0.523889, 0, 0.523892, -0.851432, 0.9997, -3.72175e-08, -2.28999e-08, 1.59041, 0.171349, 0)
+progress = 1.61844
+
+[node name="LinkDummyMeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D17"]
+transform = Transform3D(-4.37098e-08, -2.32831e-10, 1, -0.00689637, 0.999976, -6.86135e-11, -0.999976, -0.00689637, -4.37103e-08, -3.83183e-11, -0.063517, 7.41717e-06)
+mesh = SubResource("BoxMesh_exywo")
+skeleton = NodePath("../../../ParentForPathNode3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D17"]
+transform = Transform3D(1, -1.35525e-20, -1.73472e-18, 0, 1, 7.11232e-26, 0, 7.11232e-26, 1, 5.29396e-22, -0.12899, 0.000889582)
+mesh = SubResource("BoxMesh_546if")
+skeleton = NodePath("../../PathFollow3D3")
+
+[node name="PathFollow3D18" type="PathFollow3D" parent="LeftThread/LeftThread_Path3D"]
+transform = Transform3D(1.81903e-08, -0.995036, 0.0964922, -1.29598e-07, -0.0964925, -0.995032, 0.9997, 5.59651e-09, -1.30748e-07, 1.62658, 0.418695, 0)
+progress = 1.86844
+
+[node name="LinkDummyMeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D18"]
+transform = Transform3D(-4.37098e-08, -2.32831e-10, 1, -0.00689637, 0.999976, -6.86135e-11, -0.999976, -0.00689637, -4.37103e-08, -3.83183e-11, -0.063517, 7.41717e-06)
+mesh = SubResource("BoxMesh_exywo")
+skeleton = NodePath("../../../ParentForPathNode3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D18"]
+transform = Transform3D(1, -1.35525e-20, -1.73472e-18, 0, 1, 7.11232e-26, 0, 7.11232e-26, 1, 5.29396e-22, -0.12899, 0.000889582)
+mesh = SubResource("BoxMesh_546if")
+skeleton = NodePath("../../PathFollow3D3")
+
+[node name="PathFollow3D19" type="PathFollow3D" parent="LeftThread/LeftThread_Path3D"]
+transform = Transform3D(-0.00593395, -0.595148, 0.80322, 0.00444908, -0.803244, -0.59513, 0.999671, 4.21274e-05, 0.00741649, 1.53281, 0.64431, -0.000223301)
+progress = 2.11844
+
+[node name="LinkDummyMeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D19"]
+transform = Transform3D(-4.37098e-08, -2.32831e-10, 1, -0.00689637, 0.999976, -6.86135e-11, -0.999976, -0.00689637, -4.37103e-08, -3.83183e-11, -0.063517, 7.41717e-06)
+mesh = SubResource("BoxMesh_exywo")
+skeleton = NodePath("../../../ParentForPathNode3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D19"]
+transform = Transform3D(1, -1.35525e-20, -1.73472e-18, 0, 1, 7.11232e-26, 0, 7.11232e-26, 1, 5.29396e-22, -0.12899, 0.000889582)
+mesh = SubResource("BoxMesh_546if")
+skeleton = NodePath("../../PathFollow3D3")
+
+[node name="PathFollow3D20" type="PathFollow3D" parent="LeftThread/LeftThread_Path3D"]
+transform = Transform3D(-0.118257, -0.353273, 0.927691, 0.070217, -0.93489, -0.347062, 0.990194, 0.0241044, 0.135404, 1.31205, 0.753346, -0.0266404)
+progress = 2.36844
+
+[node name="LinkDummyMeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D20"]
+transform = Transform3D(-4.37098e-08, -2.32831e-10, 1, -0.00689637, 0.999976, -6.86135e-11, -0.999976, -0.00689637, -4.37103e-08, -3.83183e-11, -0.063517, 7.41717e-06)
+mesh = SubResource("BoxMesh_exywo")
+skeleton = NodePath("../../../ParentForPathNode3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LeftThread/LeftThread_Path3D/PathFollow3D20"]
+transform = Transform3D(1, -1.35525e-20, -1.73472e-18, 0, 1, 7.11232e-26, 0, 7.11232e-26, 1, 5.29396e-22, -0.12899, 0.000889582)
+mesh = SubResource("BoxMesh_546if")
+skeleton = NodePath("../../PathFollow3D3")
+
+[node name="MultiMeshInstance3D2" type="MultiMeshInstance3D" parent="LeftThread"]
+process_priority = 2
+process_physics_priority = 2
+transform = Transform3D(0.999999, 0, 0, 0, 0.999999, 0, 0, 0, 1, 0, 0, 0)
+visible = false
+multimesh = SubResource("MultiMesh_tiw8h")
+
+[node name="ParentForPathNode3D" type="Node3D" parent="LeftThread"]
+visible = false
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0.5, 1.99466)
+
+[node name="Base_Thread" parent="." instance=ExtResource("5_8ddbd")]
+
+[connection signal="curve_changed" from="LeftThread/LeftThread_Path3D" to="LeftThread/LeftThread_Path3D" method="_on_curve_changed"]

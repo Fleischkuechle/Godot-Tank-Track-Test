@@ -1,0 +1,703 @@
+[gd_scene load_steps=4 format=3 uid="uid://b13h1w0treed"]
+
+[ext_resource type="Script" path="res://Basic_thread_Path3D.gd" id="1_e21hd"]
+[ext_resource type="PackedScene" uid="uid://crothbg7crxno" path="res://BlenderFiles/Tracks.blend" id="2_028f5"]
+
+[sub_resource type="Curve3D" id="Curve3D_bcty2"]
+bake_interval = 0.01
+_data = {
+"points": PackedVector3Array(-0.34, 0, 0, 0.34, 0, 0, 1.01707, -1.04673, 4.89246, 0.116153, -0.387807, 1.24831, -0.116153, 0.387807, -1.24831, 1.21864, 0.129353, 0.960708, 0.630819, 0.0148778, 0, -0.630819, -0.0148778, 0, 0.200319, 3.00262, -5.73186, 0.178237, 0.142841, -0.158158, -0.178237, -0.142841, 0.158158, -1.03513, 1.97065, -3.83746, -0.234022, -0.00218712, 0, 0.234022, 0.00218712, 0, -0.854505, -2.56058, 9.80859),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
+}
+point_count = 5
+
+[node name="Base_Thread" type="Node3D"]
+
+[node name="Basic_thread_Path3D" type="Path3D" parent="." node_paths=PackedStringArray("Node_that_follow_the_Path")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.120529, 0.0279783, 0.0865333)
+curve = SubResource("Curve3D_bcty2")
+script = ExtResource("1_e21hd")
+speed = 0.22
+Node_that_follow_the_Path = NodePath("PathFollow3D/Tracks")
+distance_between_planks = 0.17
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.842095, 0.164859, 0.513223, 0.403067, 0.824657, 0.396462, -0.357922, 0.5408, -0.761011, -0.31405, 2.79783, -5.34812)
+progress = 12.3152
+
+[node name="Tracks" parent="Basic_thread_Path3D/PathFollow3D" instance=ExtResource("2_028f5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.445, 0)
+
+[node name="PathFollow3D2" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.870932, 0.170523, 0.460532, 0.379182, 0.82934, 0.410013, -0.312066, 0.531799, -0.787086, -0.39659, 2.72919, -5.21633)
+progress = 12.4852
+
+[node name="PathFollow3D3" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.88974, 0.173925, 0.421679, 0.361509, 0.832535, 0.419395, -0.278162, 0.52567, -0.80374, -0.471429, 2.65864, -5.081)
+progress = 12.6552
+
+[node name="PathFollow3D4" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.902697, 0.175975, 0.392248, 0.348034, 0.834664, 0.426503, -0.252376, 0.521599, -0.814827, -0.540511, 2.58671, -4.94334)
+progress = 12.8252
+
+[node name="PathFollow3D5" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.911945, 0.177108, 0.369713, 0.337622, 0.835935, 0.432339, -0.232521, 0.519167, -0.822254, -0.605204, 2.51368, -4.80412)
+progress = 12.9952
+
+[node name="PathFollow3D6" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.918591, 0.177527, 0.352669, 0.329621, 0.836438, 0.43752, -0.217345, 0.518223, -0.826993, -0.666542, 2.43973, -4.66388)
+progress = 13.1652
+
+[node name="PathFollow3D7" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.923223, 0.177275, 0.340482, 0.32374, 0.836116, 0.442496, -0.20627, 0.518831, -0.829435, -0.7254, 2.36491, -4.52303)
+progress = 13.3352
+
+[node name="PathFollow3D8" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.926034, 0.176249, 0.333305, 0.320026, 0.834755, 0.447739, -0.199343, 0.521366, -0.829546, -0.782604, 2.28924, -4.38196)
+progress = 13.5052
+
+[node name="PathFollow3D9" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.926738, 0.174076, 0.332467, 0.319063, 0.831801, 0.453871, -0.197567, 0.52678, -0.82654, -0.839097, 2.21261, -4.24111)
+progress = 13.6752
+
+[node name="PathFollow3D10" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.923985, 0.169639, 0.342304, 0.322822, 0.825761, 0.462162, -0.204293, 0.537612, -0.817883, -0.89625, 2.13478, -4.1012)
+progress = 13.8452
+
+[node name="PathFollow3D11" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.911352, 0.158292, 0.379564, 0.339252, 0.810972, 0.476378, -0.23244, 0.563004, -0.79291, -0.95695, 2.05513, -3.96385)
+progress = 14.0152
+
+[node name="PathFollow3D12" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.771534, 0.0589731, 0.633211, 0.476315, 0.713219, 0.51395, -0.421368, 0.698243, -0.578454, -1.03414, 1.97151, -3.83854)
+progress = 14.1852
+
+[node name="PathFollow3D13" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.971779, 0.219475, 0.0845946, 0.235212, 0.906138, 0.351113, 0.000406438, 0.361157, -0.932346, -1.06272, 1.90629, -3.68512)
+progress = 14.3552
+
+[node name="PathFollow3D14" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.973626, 0.220936, 0.0541376, 0.226066, 0.913393, 0.338091, 0.0252513, 0.341463, -0.939403, -1.07404, 1.84801, -3.52621)
+progress = 14.5252
+
+[node name="PathFollow3D15" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974185, 0.221377, 0.0405682, 0.222105, 0.916513, 0.332216, 0.036369, 0.332701, -0.942171, -1.08198, 1.79107, -3.36622)
+progress = 14.6952
+
+[node name="PathFollow3D16" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974441, 0.22158, 0.0324214, 0.219759, 0.918351, 0.328684, 0.0430619, 0.32746, -0.943723, -1.08814, 1.73491, -3.20589)
+progress = 14.8652
+
+[node name="PathFollow3D17" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974589, 0.221693, 0.0268144, 0.218159, 0.919599, 0.326261, 0.0476782, 0.32387, -0.944744, -1.09315, 1.67924, -3.04534)
+progress = 15.0352
+
+[node name="PathFollow3D18" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974679, 0.221762, 0.0226363, 0.216972, 0.920512, 0.324462, 0.0511241, 0.321207, -0.945467, -1.09733, 1.62393, -2.88465)
+progress = 15.2052
+
+[node name="PathFollow3D19" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974732, 0.221809, 0.0193555, 0.216043, 0.921225, 0.323061, 0.0538343, 0.319131, -0.946024, -1.10089, 1.56889, -2.72384)
+progress = 15.3752
+
+[node name="PathFollow3D20" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974776, 0.221841, 0.0166818, 0.215289, 0.921798, 0.321927, 0.056047, 0.317448, -0.946461, -1.10395, 1.51406, -2.56296)
+progress = 15.5452
+
+[node name="PathFollow3D21" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974813, 0.221864, 0.0144409, 0.21466, 0.922274, 0.320985, 0.0579048, 0.316048, -0.946819, -1.10659, 1.4594, -2.402)
+progress = 15.7152
+
+[node name="PathFollow3D22" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974836, 0.221881, 0.0125216, 0.214121, 0.922679, 0.320184, 0.0594982, 0.314857, -0.947114, -1.10888, 1.4049, -2.241)
+progress = 15.8852
+
+[node name="PathFollow3D23" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974858, 0.221895, 0.0108487, 0.213652, 0.923028, 0.319495, 0.0608894, 0.313827, -0.947368, -1.11086, 1.35052, -2.07994)
+progress = 16.0552
+
+[node name="PathFollow3D24" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974859, 0.221902, 0.0093692, 0.213234, 0.923323, 0.318891, 0.0621209, 0.31292, -0.947585, -1.11258, 1.29625, -1.91885)
+progress = 16.2252
+
+[node name="PathFollow3D25" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974871, 0.221911, 0.00804503, 0.212863, 0.923599, 0.318358, 0.0632256, 0.31212, -0.947779, -1.11406, 1.24207, -1.75771)
+progress = 16.3952
+
+[node name="PathFollow3D26" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974877, 0.221915, 0.00684762, 0.212527, 0.923834, 0.317881, 0.064226, 0.311398, -0.947945, -1.11532, 1.18799, -1.59655)
+progress = 16.5652
+
+[node name="PathFollow3D27" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974885, 0.221919, 0.00575506, 0.212221, 0.924053, 0.317452, 0.0651405, 0.310748, -0.948096, -1.11639, 1.13398, -1.43537)
+progress = 16.7352
+
+[node name="PathFollow3D28" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974883, 0.221923, 0.00475029, 0.211938, 0.924251, 0.317064, 0.0659823, 0.310155, -0.948237, -1.11728, 1.08004, -1.27416)
+progress = 16.9052
+
+[node name="PathFollow3D29" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974891, 0.221925, 0.00381976, 0.211678, 0.924432, 0.316706, 0.066764, 0.309612, -0.948353, -1.11801, 1.02616, -1.11292)
+progress = 17.0752
+
+[node name="PathFollow3D30" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974894, 0.221927, 0.00295254, 0.211434, 0.924602, 0.316381, 0.0674935, 0.309111, -0.948468, -1.11859, 0.972338, -0.951662)
+progress = 17.2452
+
+[node name="PathFollow3D31" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974898, 0.221929, 0.00214003, 0.211206, 0.92476, 0.316079, 0.0681783, 0.308647, -0.948566, -1.11902, 0.91857, -0.790385)
+progress = 17.4152
+
+[node name="PathFollow3D32" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974899, 0.221929, 0.00137486, 0.210991, 0.924899, 0.3158, 0.0688242, 0.308212, -0.948661, -1.11932, 0.864854, -0.6291)
+progress = 17.5852
+
+[node name="PathFollow3D33" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974902, 0.221929, 0.000650692, 0.210788, 0.925035, 0.315541, 0.0694367, 0.307807, -0.948748, -1.11949, 0.811182, -0.467795)
+progress = 17.7552
+
+[node name="PathFollow3D34" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974902, 0.22193, -3.76956e-05, 0.210594, 0.925164, 0.3153, 0.0700199, 0.307426, -0.948831, -1.11954, 0.75755, -0.30647)
+progress = 17.9252
+
+[node name="PathFollow3D35" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974902, 0.221929, -0.000694014, 0.210409, 0.92528, 0.315074, 0.0705769, 0.307066, -0.94891, -1.11948, 0.703961, -0.14514)
+progress = 18.0952
+
+[node name="PathFollow3D36" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974897, 0.22193, -0.00132282, 0.210231, 0.925396, 0.314859, 0.0711112, 0.306727, -0.948974, -1.11931, 0.65041, 0.0162036)
+progress = 18.2652
+
+[node name="PathFollow3D37" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974896, 0.221929, -0.00192704, 0.21006, 0.925501, 0.314656, 0.0716259, 0.306403, -0.949035, -1.11903, 0.596893, 0.177558)
+progress = 18.4352
+
+[node name="PathFollow3D38" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974899, 0.221928, -0.0025094, 0.209896, 0.925603, 0.314467, 0.0721232, 0.306096, -0.949099, -1.11865, 0.543407, 0.338931)
+progress = 18.6052
+
+[node name="PathFollow3D39" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974893, 0.221928, -0.00307281, 0.209736, 0.925703, 0.314288, 0.0726045, 0.305803, -0.949156, -1.11818, 0.489955, 0.500308)
+progress = 18.7752
+
+[node name="PathFollow3D40" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974889, 0.221925, -0.00361908, 0.209581, 0.92579, 0.314117, 0.0730723, 0.30552, -0.949211, -1.11761, 0.436532, 0.661695)
+progress = 18.9452
+
+[node name="PathFollow3D41" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974892, 0.221925, -0.00415046, 0.209431, 0.925883, 0.313955, 0.0735287, 0.305252, -0.949262, -1.11695, 0.383139, 0.823086)
+progress = 19.1152
+
+[node name="PathFollow3D42" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974895, 0.221924, -0.00466876, 0.209284, 0.925967, 0.3138, 0.0739747, 0.304992, -0.949312, -1.1162, 0.329769, 0.984498)
+progress = 19.2852
+
+[node name="PathFollow3D43" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974886, 0.221922, -0.00517532, 0.209139, 0.926049, 0.313652, 0.0744105, 0.304742, -0.949356, -1.11536, 0.276429, 1.14591)
+progress = 19.4552
+
+[node name="PathFollow3D44" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974885, 0.221921, -0.00567175, 0.208998, 0.926131, 0.31351, 0.0748391, 0.304501, -0.949399, -1.11444, 0.223112, 1.30732)
+progress = 19.6252
+
+[node name="PathFollow3D45" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974883, 0.221919, -0.00615961, 0.208858, 0.926207, 0.313375, 0.075261, 0.304266, -0.949442, -1.11343, 0.169818, 1.46875)
+progress = 19.7952
+
+[node name="PathFollow3D46" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974875, 0.221917, -0.00663979, 0.20872, 0.926279, 0.313244, 0.0756766, 0.304039, -0.949479, -1.11234, 0.116545, 1.63019)
+progress = 19.9652
+
+[node name="PathFollow3D47" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974875, 0.221917, -0.00711393, 0.208585, 0.926356, 0.313121, 0.0760883, 0.303819, -0.949521, -1.11117, 0.0632962, 1.79163)
+progress = 20.1352
+
+[node name="PathFollow3D48" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974867, 0.221915, -0.00758261, 0.20845, 0.926427, 0.313, 0.0764955, 0.303604, -0.949555, -1.10992, 0.0100677, 1.95308)
+progress = 20.3052
+
+[node name="PathFollow3D49" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974868, 0.221914, -0.0080473, 0.208317, 0.926498, 0.312885, 0.0769007, 0.303395, -0.949594, -1.1086, -0.0431407, 2.11453)
+progress = 20.4752
+
+[node name="PathFollow3D50" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974872, 0.22191, -0.00850878, 0.208186, 0.926556, 0.312772, 0.0773041, 0.303187, -0.949623, -1.10719, -0.0963312, 2.27599)
+progress = 20.6452
+
+[node name="PathFollow3D51" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974863, 0.221909, -0.00896803, 0.208053, 0.926629, 0.312664, 0.0777054, 0.302988, -0.949653, -1.1057, -0.149501, 2.43746)
+progress = 20.8152
+
+[node name="PathFollow3D52" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.97486, 0.221908, -0.00942625, 0.207921, 0.926694, 0.312561, 0.0781068, 0.30279, -0.94969, -1.10414, -0.202654, 2.59893)
+progress = 20.9852
+
+[node name="PathFollow3D53" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974855, 0.221905, -0.00988388, 0.207788, 0.926754, 0.312457, 0.0785085, 0.302595, -0.949711, -1.1025, -0.255789, 2.7604)
+progress = 21.1552
+
+[node name="PathFollow3D54" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974851, 0.221904, -0.0103421, 0.207656, 0.926821, 0.312361, 0.0789114, 0.302405, -0.949745, -1.10078, -0.308907, 2.92188)
+progress = 21.3252
+
+[node name="PathFollow3D55" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974849, 0.221901, -0.0108018, 0.207523, 0.92688, 0.312262, 0.0793166, 0.302216, -0.949761, -1.09898, -0.362011, 3.08337)
+progress = 21.4952
+
+[node name="PathFollow3D56" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.97484, 0.221899, -0.0112642, 0.207388, 0.926943, 0.31217, 0.0797242, 0.30203, -0.949788, -1.0971, -0.415096, 3.24486)
+progress = 21.6652
+
+[node name="PathFollow3D57" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974837, 0.221896, -0.0117297, 0.207253, 0.927001, 0.312081, 0.0801359, 0.301844, -0.949817, -1.09515, -0.468166, 3.40635)
+progress = 21.8352
+
+[node name="PathFollow3D58" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974832, 0.221894, -0.0121995, 0.207117, 0.92706, 0.311993, 0.0805519, 0.301661, -0.949839, -1.09311, -0.521219, 3.56785)
+progress = 22.0052
+
+[node name="PathFollow3D59" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974826, 0.221892, -0.0126745, 0.206978, 0.927122, 0.311906, 0.0809733, 0.301479, -0.94986, -1.091, -0.574261, 3.72935)
+progress = 22.1752
+
+[node name="PathFollow3D60" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974816, 0.221889, -0.0131559, 0.206837, 0.927179, 0.311823, 0.0814007, 0.301297, -0.949884, -1.0888, -0.627285, 3.89085)
+progress = 22.3452
+
+[node name="PathFollow3D61" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974817, 0.221888, -0.0136448, 0.206696, 0.927245, 0.311741, 0.0818365, 0.301118, -0.949903, -1.08653, -0.680296, 4.05236)
+progress = 22.5152
+
+[node name="PathFollow3D62" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974813, 0.221884, -0.014142, 0.206551, 0.9273, 0.311659, 0.08228, 0.300935, -0.949918, -1.08416, -0.733293, 4.21386)
+progress = 22.6852
+
+[node name="PathFollow3D63" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974801, 0.221881, -0.0146489, 0.206401, 0.927359, 0.311582, 0.0827322, 0.300754, -0.949941, -1.08172, -0.786279, 4.37539)
+progress = 22.8552
+
+[node name="PathFollow3D64" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974794, 0.221878, -0.0151668, 0.206249, 0.927419, 0.311504, 0.0831954, 0.300571, -0.949955, -1.07918, -0.839249, 4.5369)
+progress = 23.0252
+
+[node name="PathFollow3D65" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974784, 0.221875, -0.0156971, 0.206093, 0.92748, 0.311427, 0.0836703, 0.300388, -0.949968, -1.07656, -0.892206, 4.69842)
+progress = 23.1952
+
+[node name="PathFollow3D66" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974771, 0.221872, -0.0162417, 0.205932, 0.927538, 0.311355, 0.0841584, 0.300202, -0.949992, -1.07384, -0.945151, 4.85994)
+progress = 23.3652
+
+[node name="PathFollow3D67" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974767, 0.221868, -0.0168014, 0.205768, 0.927599, 0.311279, 0.0846619, 0.300015, -0.95, -1.07103, -0.998085, 5.02147)
+progress = 23.5352
+
+[node name="PathFollow3D68" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.97476, 0.221866, -0.0173788, 0.205598, 0.927664, 0.311206, 0.0851816, 0.299826, -0.950013, -1.06813, -1.051, 5.183)
+progress = 23.7052
+
+[node name="PathFollow3D69" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974748, 0.221862, -0.0179754, 0.205422, 0.927725, 0.311136, 0.085719, 0.299633, -0.95003, -1.06512, -1.10391, 5.34453)
+progress = 23.8752
+
+[node name="PathFollow3D70" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.97474, 0.221859, -0.018594, 0.20524, 0.927792, 0.311064, 0.0862775, 0.299438, -0.950039, -1.06201, -1.15681, 5.50606)
+progress = 24.0452
+
+[node name="PathFollow3D71" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974728, 0.221855, -0.0192366, 0.205049, 0.927858, 0.310993, 0.0868582, 0.299237, -0.950048, -1.0588, -1.20969, 5.6676)
+progress = 24.2152
+
+[node name="PathFollow3D72" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974716, 0.22185, -0.0199063, 0.204851, 0.927924, 0.310923, 0.0874643, 0.299032, -0.950056, -1.05547, -1.26256, 5.82913)
+progress = 24.3852
+
+[node name="PathFollow3D73" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.9747, 0.221846, -0.0206064, 0.204643, 0.927993, 0.310855, 0.0880983, 0.298821, -0.950068, -1.05203, -1.31542, 5.99066)
+progress = 24.5552
+
+[node name="PathFollow3D74" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974685, 0.22184, -0.0213405, 0.204425, 0.928063, 0.310785, 0.0887644, 0.298602, -0.950071, -1.04846, -1.36827, 6.1522)
+progress = 24.7252
+
+[node name="PathFollow3D75" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974669, 0.221835, -0.0221133, 0.204196, 0.928133, 0.310716, 0.0894663, 0.298376, -0.95008, -1.04477, -1.42111, 6.31375)
+progress = 24.8952
+
+[node name="PathFollow3D76" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974654, 0.221831, -0.0229293, 0.203953, 0.928217, 0.310647, 0.0902086, 0.298144, -0.950084, -1.04094, -1.47393, 6.47528)
+progress = 25.0652
+
+[node name="PathFollow3D77" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974635, 0.221824, -0.0237941, 0.203696, 0.928292, 0.310576, 0.0909962, 0.297898, -0.95008, -1.03697, -1.52674, 6.63682)
+progress = 25.2352
+
+[node name="PathFollow3D78" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974611, 0.221817, -0.0247155, 0.203421, 0.928376, 0.310506, 0.0918359, 0.297642, -0.950079, -1.03285, -1.57954, 6.79836)
+progress = 25.4052
+
+[node name="PathFollow3D79" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974585, 0.22181, -0.0257009, 0.203127, 0.928462, 0.310437, 0.0927349, 0.297372, -0.950082, -1.02856, -1.63233, 6.9599)
+progress = 25.5752
+
+[node name="PathFollow3D80" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974561, 0.221801, -0.0267605, 0.202811, 0.928554, 0.310363, 0.0937031, 0.297086, -0.950073, -1.0241, -1.68511, 7.12144)
+progress = 25.7452
+
+[node name="PathFollow3D81" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974533, 0.221794, -0.0279061, 0.202469, 0.92866, 0.310289, 0.0947512, 0.296784, -0.950061, -1.01946, -1.73787, 7.28297)
+progress = 25.9152
+
+[node name="PathFollow3D82" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974497, 0.221783, -0.0291526, 0.202096, 0.928762, 0.310213, 0.095892, 0.296457, -0.950048, -1.01461, -1.79062, 7.44451)
+progress = 26.0852
+
+[node name="PathFollow3D83" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974453, 0.221771, -0.0305188, 0.201687, 0.928872, 0.310135, 0.0971435, 0.296104, -0.950029, -1.00954, -1.84336, 7.60604)
+progress = 26.2552
+
+[node name="PathFollow3D84" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974413, 0.221759, -0.0320282, 0.201236, 0.929, 0.310056, 0.0985281, 0.295722, -0.950014, -1.00422, -1.89609, 7.76758)
+progress = 26.4252
+
+[node name="PathFollow3D85" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974364, 0.221745, -0.0337101, 0.200733, 0.929139, 0.30997, 0.100073, 0.295301, -0.949982, -0.998635, -1.9488, 7.92909)
+progress = 26.5952
+
+[node name="PathFollow3D86" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974294, 0.221728, -0.0356058, 0.200163, 0.92929, 0.309878, 0.101814, 0.294832, -0.949936, -0.992745, -2.00149, 8.09062)
+progress = 26.7652
+
+[node name="PathFollow3D87" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974218, 0.221708, -0.0377688, 0.199515, 0.929467, 0.309782, 0.103803, 0.294307, -0.949887, -0.986512, -2.05417, 8.25213)
+progress = 26.9352
+
+[node name="PathFollow3D88" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974128, 0.221683, -0.0402748, 0.198764, 0.929662, 0.309676, 0.10611, 0.293703, -0.949821, -0.979882, -2.10684, 8.41363)
+progress = 27.1052
+
+[node name="PathFollow3D89" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.974007, 0.221652, -0.043232, 0.197876, 0.92989, 0.309556, 0.108833, 0.293, -0.949728, -0.972791, -2.15948, 8.57512)
+progress = 27.2752
+
+[node name="PathFollow3D90" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.973849, 0.221612, -0.0468049, 0.196802, 0.930163, 0.309418, 0.112126, 0.292161, -0.949603, -0.965146, -2.2121, 8.73659)
+progress = 27.4452
+
+[node name="PathFollow3D91" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.973634, 0.221558, -0.0512541, 0.195465, 0.930495, 0.309255, 0.116229, 0.291127, -0.949428, -0.956825, -2.2647, 8.89804)
+progress = 27.6152
+
+[node name="PathFollow3D92" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.973332, 0.221483, -0.057027, 0.19373, 0.930929, 0.309048, 0.121557, 0.289802, -0.949168, -0.947642, -2.31727, 9.05945)
+progress = 27.7852
+
+[node name="PathFollow3D93" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.972862, 0.221367, -0.0649722, 0.191342, 0.931516, 0.308766, 0.128894, 0.287997, -0.948752, -0.937311, -2.36979, 9.2208)
+progress = 27.9552
+
+[node name="PathFollow3D94" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.972034, 0.221165, -0.0769732, 0.187735, 0.932396, 0.308329, 0.139985, 0.285298, -0.947994, -0.925324, -2.42225, 9.38205)
+progress = 28.1252
+
+[node name="PathFollow3D95" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.970195, 0.220723, -0.098444, 0.181281, 0.933955, 0.307482, 0.159836, 0.280513, -0.946286, -0.910623, -2.47461, 9.54312)
+progress = 28.2952
+
+[node name="PathFollow3D96" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.962788, 0.218954, -0.157419, 0.163571, 0.938178, 0.304522, 0.214399, 0.26748, -0.939242, -0.889986, -2.52672, 9.70362)
+progress = 28.4652
+
+[node name="PathFollow3D97" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.618525, -0.181805, -0.764238, 0.0637323, 0.981102, -0.181815, 0.782977, 0.0637602, 0.618521, 1.06354, -1.04142, 4.87438)
+progress = 0.0511894
+
+[node name="PathFollow3D98" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.910997, -0.267973, -0.312989, 0.185869, 0.945094, -0.268181, 0.367733, 0.186166, 0.910929, 1.14398, -0.999748, 4.73275)
+progress = 0.221188
+
+[node name="PathFollow3D99" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.940153, -0.276629, -0.198175, 0.216967, 0.93586, -0.277063, 0.262152, 0.217518, 0.940021, 1.18599, -0.953224, 4.57482)
+progress = 0.391186
+
+[node name="PathFollow3D100" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.949378, -0.279391, -0.142489, 0.232055, 0.931336, -0.280053, 0.210984, 0.232845, 0.949186, 1.21451, -0.905825, 4.41408)
+progress = 0.561192
+
+[node name="PathFollow3D101" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.953544, -0.280651, -0.108028, 0.241393, 0.92851, -0.281539, 0.179349, 0.242419, 0.953284, 1.23561, -0.858071, 4.25231)
+progress = 0.73119
+
+[node name="PathFollow3D102" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.955778, -0.281334, -0.0838686, 0.247941, 0.92651, -0.282453, 0.157195, 0.249204, 0.955443, 1.25182, -0.810119, 4.09003)
+progress = 0.901188
+
+[node name="PathFollow3D103" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.957079, -0.281739, -0.0655823, 0.252892, 0.924969, -0.283097, 0.140445, 0.2544, 0.956675, 1.26446, -0.762038, 3.92746)
+progress = 1.07119
+
+[node name="PathFollow3D104" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.957887, -0.281996, -0.0509961, 0.256841, 0.923728, -0.283603, 0.127102, 0.258604, 0.957417, 1.27433, -0.71386, 3.76474)
+progress = 1.24118
+
+[node name="PathFollow3D105" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.958412, -0.282161, -0.0388958, 0.260119, 0.922674, -0.284032, 0.116051, 0.262141, 0.957859, 1.28194, -0.6656, 3.6019)
+progress = 1.41119
+
+[node name="PathFollow3D106" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.958742, -0.282272, -0.0285476, 0.262917, 0.921769, -0.284419, 0.106615, 0.265221, 0.958108, 1.28765, -0.617274, 3.43902)
+progress = 1.58119
+
+[node name="PathFollow3D107" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.958949, -0.28234, -0.0194724, 0.265371, 0.920952, -0.284785, 0.0983551, 0.267969, 0.958229, 1.29172, -0.568884, 3.2761)
+progress = 1.75119
+
+[node name="PathFollow3D108" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.959064, -0.28238, -0.0113391, 0.267567, 0.920202, -0.285143, 0.0909677, 0.27048, 0.958251, 1.29433, -0.520433, 3.11317)
+progress = 1.92118
+
+[node name="PathFollow3D109" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.95912, -0.2824, -0.00390863, 0.269573, 0.919507, -0.285506, 0.0842343, 0.272824, 0.958202, 1.29561, -0.471918, 2.95024)
+progress = 2.09119
+
+[node name="PathFollow3D110" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.959125, -0.282399, 0.003001, 0.271436, 0.918838, -0.285882, 0.0779883, 0.275053, 0.958095, 1.29568, -0.423343, 2.78733)
+progress = 2.26119
+
+[node name="PathFollow3D111" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.959086, -0.282386, 0.00953591, 0.273195, 0.918197, -0.286279, 0.0720969, 0.277214, 0.957933, 1.29461, -0.374703, 2.62445)
+progress = 2.43119
+
+[node name="PathFollow3D112" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.959009, -0.282359, 0.0158199, 0.274884, 0.917562, -0.286705, 0.0664482, 0.279346, 0.957725, 1.29246, -0.325993, 2.46159)
+progress = 2.60118
+
+[node name="PathFollow3D113" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.958905, -0.282316, 0.0219652, 0.276535, 0.916919, -0.287169, 0.060942, 0.281485, 0.957466, 1.28924, -0.277204, 2.29877)
+progress = 2.77119
+
+[node name="PathFollow3D114" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.95876, -0.282259, 0.0280804, 0.278174, 0.91626, -0.287683, 0.0554809, 0.283673, 0.957153, 1.28499, -0.228336, 2.136)
+progress = 2.94119
+
+[node name="PathFollow3D115" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.958581, -0.282186, 0.034281, 0.279835, 0.915578, -0.288262, 0.0499639, 0.285958, 0.956783, 1.27969, -0.179374, 1.97329)
+progress = 3.11119
+
+[node name="PathFollow3D116" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.958356, -0.282089, 0.0406984, 0.28155, 0.914839, -0.288918, 0.0442752, 0.28839, 0.956326, 1.27332, -0.130308, 1.81065)
+progress = 3.28119
+
+[node name="PathFollow3D117" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.958082, -0.281967, 0.0474985, 0.283368, 0.914037, -0.289685, 0.0382721, 0.291045, 0.955783, 1.26583, -0.0811191, 1.64809)
+progress = 3.45119
+
+[node name="PathFollow3D118" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.957731, -0.281809, 0.0549013, 0.285343, 0.913137, -0.290594, 0.0317642, 0.294022, 0.955112, 1.25713, -0.0317909, 1.48564)
+progress = 3.62119
+
+[node name="PathFollow3D119" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.957283, -0.281595, 0.0632304, 0.287568, 0.912084, -0.291701, 0.0244738, 0.297467, 0.954259, 1.24711, 0.0177081, 1.32332)
+progress = 3.79119
+
+[node name="PathFollow3D120" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.956674, -0.281298, 0.0729979, 0.290177, 0.910809, -0.293096, 0.0159624, 0.301625, 0.953132, 1.23555, 0.0674171, 1.16116)
+progress = 3.96119
+
+[node name="PathFollow3D121" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.955802, -0.280858, 0.0851048, 0.293419, 0.909174, -0.294936, 0.00546102, 0.306919, 0.951556, 1.22215, 0.117402, 0.999222)
+progress = 4.13119
+
+[node name="PathFollow3D122" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.956928, -0.278656, 0.0794893, 0.289196, 0.901102, -0.322587, 0.0182654, 0.33173, 0.943037, 1.20783, 0.169564, 0.838082)
+progress = 4.30119
+
+[node name="PathFollow3D123" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.957809, -0.277263, 0.073561, 0.28538, 0.895044, -0.342255, 0.0290589, 0.348861, 0.936558, 1.19487, 0.226242, 0.678332)
+progress = 4.47119
+
+[node name="PathFollow3D124" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.958284, -0.276437, 0.0704456, 0.283091, 0.89104, -0.354392, 0.0352024, 0.359606, 0.932273, 1.18266, 0.285536, 0.519478)
+progress = 4.64119
+
+[node name="PathFollow3D125" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.95857, -0.275869, 0.0687275, 0.281605, 0.888113, -0.362822, 0.0390593, 0.3672, 0.929157, 1.17084, 0.346549, 0.36124)
+progress = 4.81119
+
+[node name="PathFollow3D126" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.958757, -0.275443, 0.0678283, 0.280607, 0.885831, -0.369109, 0.0415902, 0.372972, 0.926747, 1.15924, 0.408796, 0.203472)
+progress = 4.98119
+
+[node name="PathFollow3D127" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.958879, -0.275107, 0.0674645, 0.279934, 0.883984, -0.374025, 0.0432657, 0.377587, 0.924799, 1.14775, 0.471987, 0.046074)
+progress = 5.15119
+
+[node name="PathFollow3D128" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.958958, -0.274827, 0.0674798, 0.279495, 0.882428, -0.378002, 0.0443461, 0.381406, 0.923176, 1.13628, 0.535929, -0.111022)
+progress = 5.32119
+
+[node name="PathFollow3D129" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.959, -0.274591, 0.0677823, 0.27923, 0.881095, -0.381307, 0.0449869, 0.384661, 0.921799, 1.12478, 0.600488, -0.267866)
+progress = 5.49118
+
+[node name="PathFollow3D130" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.959024, -0.274379, 0.0683129, 0.279105, 0.879912, -0.384103, 0.0452875, 0.387489, 0.920594, 1.11322, 0.665566, -0.424495)
+progress = 5.66119
+
+[node name="PathFollow3D131" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.959024, -0.274193, 0.069035, 0.279094, 0.878864, -0.386511, 0.0453129, 0.390001, 0.919536, 1.10154, 0.731083, -0.580927)
+progress = 5.83119
+
+[node name="PathFollow3D132" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.959012, -0.274023, 0.0699231, 0.279182, 0.877913, -0.388609, 0.045108, 0.392262, 0.918585, 1.08973, 0.796981, -0.737188)
+progress = 6.00119
+
+[node name="PathFollow3D133" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.958985, -0.273864, 0.0709606, 0.279355, 0.877037, -0.390453, 0.0447033, 0.394323, 0.917713, 1.07776, 0.863215, -0.893295)
+progress = 6.17118
+
+[node name="PathFollow3D134" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.958935, -0.273716, 0.0721395, 0.279602, 0.876227, -0.392099, 0.0441197, 0.396228, 0.91693, 1.06559, 0.929747, -1.04927)
+progress = 6.34119
+
+[node name="PathFollow3D135" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.958876, -0.273576, 0.0734516, 0.279923, 0.875468, -0.393566, 0.0433721, 0.398006, 0.91619, 1.05322, 0.99654, -1.20511)
+progress = 6.51119
+
+[node name="PathFollow3D136" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.958803, -0.273438, 0.0748959, 0.280311, 0.87474, -0.394888, 0.0424697, 0.399676, 0.915502, 1.04061, 1.06357, -1.36082)
+progress = 6.68119
+
+[node name="PathFollow3D137" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.958713, -0.273309, 0.0764732, 0.280765, 0.87406, -0.396086, 0.0414175, 0.401269, 0.914855, 1.02774, 1.13081, -1.51642)
+progress = 6.85118
+
+[node name="PathFollow3D138" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.95861, -0.27318, 0.0781866, 0.281285, 0.873397, -0.397176, 0.0402179, 0.402794, 0.914243, 1.01459, 1.19825, -1.67192)
+progress = 7.02119
+
+[node name="PathFollow3D139" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.958498, -0.273051, 0.0800407, 0.281873, 0.872753, -0.398167, 0.0388699, 0.404265, 0.913651, 1.00115, 1.26587, -1.82732)
+progress = 7.19119
+
+[node name="PathFollow3D140" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.958367, -0.272926, 0.0820434, 0.282528, 0.872133, -0.399072, 0.0373698, 0.405701, 0.913076, 0.987369, 1.33365, -1.98261)
+progress = 7.36119
+
+[node name="PathFollow3D141" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.958216, -0.272795, 0.0842049, 0.283254, 0.871508, -0.3999, 0.0357111, 0.407102, 0.912515, 0.973238, 1.40157, -2.13781)
+progress = 7.53119
+
+[node name="PathFollow3D142" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.958042, -0.272668, 0.0865384, 0.284055, 0.870907, -0.400661, 0.0338851, 0.408494, 0.91197, 0.958725, 1.46963, -2.29292)
+progress = 7.70119
+
+[node name="PathFollow3D143" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.957849, -0.272535, 0.0890577, 0.284937, 0.8703, -0.401353, 0.0318803, 0.409875, 0.91142, 0.9438, 1.53781, -2.44793)
+progress = 7.87119
+
+[node name="PathFollow3D144" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.957632, -0.272397, 0.0917824, 0.285906, 0.869687, -0.401985, 0.0296818, 0.411258, 0.91087, 0.928429, 1.60611, -2.60284)
+progress = 8.04119
+
+[node name="PathFollow3D145" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.957387, -0.272254, 0.0947351, 0.286972, 0.86907, -0.40256, 0.0272712, 0.412653, 0.910316, 0.912577, 1.6745, -2.75766)
+progress = 8.21119
+
+[node name="PathFollow3D146" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.957105, -0.272103, 0.0979424, 0.288143, 0.868438, -0.403077, 0.0246252, 0.414071, 0.909744, 0.8962, 1.74299, -2.9124)
+progress = 8.38119
+
+[node name="PathFollow3D147" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.956787, -0.271946, 0.101438, 0.289433, 0.867801, -0.403542, 0.0217166, 0.415527, 0.909156, 0.879255, 1.81157, -3.06702)
+progress = 8.55119
+
+[node name="PathFollow3D148" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.956425, -0.271774, 0.105262, 0.290858, 0.867133, -0.403953, 0.0185103, 0.417027, 0.908548, 0.861688, 1.88021, -3.22155)
+progress = 8.72119
+
+[node name="PathFollow3D149" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.956008, -0.271591, 0.109463, 0.292437, 0.86644, -0.404302, 0.0149638, 0.418589, 0.907891, 0.843439, 1.94893, -3.37597)
+progress = 8.89119
+
+[node name="PathFollow3D150" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.955518, -0.271389, 0.114103, 0.294192, 0.86571, -0.404594, 0.0110236, 0.420228, 0.907192, 0.82444, 2.01769, -3.53028)
+progress = 9.06119
+
+[node name="PathFollow3D151" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.954954, -0.271166, 0.119258, 0.296157, 0.864934, -0.404816, 0.00662304, 0.421964, 0.906423, 0.804609, 2.0865, -3.68446)
+progress = 9.23119
+
+[node name="PathFollow3D152" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.954287, -0.270916, 0.125027, 0.298368, 0.864105, -0.404968, 0.00167617, 0.423824, 0.905579, 0.783852, 2.15535, -3.8385)
+progress = 9.40119
+
+[node name="PathFollow3D153" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.953494, -0.270631, 0.131537, 0.300876, 0.863207, -0.405035, -0.00392873, 0.425839, 0.904629, 0.762053, 2.22421, -3.99239)
+progress = 9.57119
+
+[node name="PathFollow3D154" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.952531, -0.270299, 0.138953, 0.303746, 0.862212, -0.404997, -0.0103383, 0.428044, 0.903533, 0.739072, 2.29307, -4.14611)
+progress = 9.74118
+
+[node name="PathFollow3D155" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.951358, -0.26991, 0.147506, 0.307072, 0.861112, -0.404835, -0.0177524, 0.430502, 0.902255, 0.714737, 2.36192, -4.29963)
+progress = 9.91119
+
+[node name="PathFollow3D156" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.949885, -0.26944, 0.157507, 0.310975, 0.859864, -0.404509, -0.0264471, 0.43328, 0.900712, 0.68883, 2.43073, -4.45291)
+progress = 10.0812
+
+[node name="PathFollow3D157" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.948002, -0.268858, 0.169407, 0.315637, 0.858424, -0.403957, -0.0368217, 0.436489, 0.898791, 0.66107, 2.49946, -4.60589)
+progress = 10.2512
+
+[node name="PathFollow3D158" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.945509, -0.26811, 0.183888, 0.321323, 0.856716, -0.403094, -0.0494727, 0.440282, 0.896333, 0.631078, 2.56807, -4.75851)
+progress = 10.4212
+
+[node name="PathFollow3D159" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.942087, -0.267112, 0.202014, 0.328462, 0.854631, -0.401758, -0.0653429, 0.44491, 0.893023, 0.598333, 2.63651, -4.91065)
+progress = 10.5912
+
+[node name="PathFollow3D160" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.937129, -0.265702, 0.225593, 0.33777, 0.85199, -0.399657, -0.0860257, 0.450793, 0.888312, 0.562076, 2.70465, -5.06211)
+progress = 10.7612
+
+[node name="PathFollow3D161" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.92935, -0.263542, 0.257961, 0.350562, 0.848434, -0.396184, -0.114468, 0.458693, 0.881023, 0.521128, 2.77233, -5.21257)
+progress = 10.9312
+
+[node name="PathFollow3D162" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.915672, -0.259821, 0.306163, 0.369629, 0.843247, -0.389881, -0.156895, 0.470237, 0.868313, 0.473491, 2.8392, -5.36136)
+progress = 11.1012
+
+[node name="PathFollow3D163" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.886199, -0.251954, 0.388412, 0.40213, 0.834569, -0.376147, -0.229416, 0.489606, 0.841049, 0.415149, 2.90452, -5.50707)
+progress = 11.2712
+
+[node name="PathFollow3D164" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.789312, -0.226513, 0.57042, 0.473645, 0.815779, -0.331456, -0.390315, 0.531877, 0.751307, 0.336109, 2.96557, -5.64427)
+progress = 11.4412
+
+[node name="PathFollow3D165" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(0.00872132, -0.0243675, 0.999522, 0.631963, 0.774691, 0.0133722, -0.774756, 0.631635, 0.0221591, 0.202746, 3.00266, -5.73182)
+progress = 11.6112
+
+[node name="PathFollow3D166" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.462306, 0.0821917, 0.882739, 0.572179, 0.788101, 0.226284, -0.677187, 0.609784, -0.411438, 0.0401756, 2.98023, -5.69454)
+progress = 11.7812
+
+[node name="PathFollow3D167" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.684368, 0.131272, 0.717016, 0.495588, 0.805016, 0.325643, -0.53454, 0.578289, -0.616079, -0.0952459, 2.93212, -5.60477)
+progress = 11.9512
+
+[node name="PathFollow3D168" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.784607, 0.152905, 0.600595, 0.442641, 0.816434, 0.370413, -0.433768, 0.556557, -0.708376, -0.206589, 2.87249, -5.49123)
+progress = 12.1212
+
+[node name="PathFollow3D169" type="PathFollow3D" parent="Basic_thread_Path3D"]
+transform = Transform3D(-0.836791, 0.163783, 0.522169, 0.40712, 0.823836, 0.394021, -0.3657, 0.542378, -0.756173, -0.301621, 2.80732, -5.36633)
+progress = 12.2912
+
+[connection signal="curve_changed" from="Basic_thread_Path3D" to="Basic_thread_Path3D" method="_on_curve_changed"]

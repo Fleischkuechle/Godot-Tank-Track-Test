@@ -1,0 +1,229 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwlevrrp3il38"]
+
+[ext_resource type="PackedScene" uid="uid://7y04cohul3up" path="res://tank_track_path_3d.tscn" id="1_0573k"]
+
+[node name="Testing" type="Node3D"]
+
+[node name="TankTrackPath3D" parent="." instance=ExtResource("1_0573k")]
+
+[node name="PathFollow3D_Node" parent="TankTrackPath3D" index="0"]
+transform = Transform3D(0.00278264, 0.120829, 0.992501, 0.0228495, 0.992209, -0.120864, -0.999568, 0.0230177, 7.49318e-08, 0.612146, 1.66645, 0)
+progress = 9.2423
+
+[node name="PathFollow3D_Node2" parent="TankTrackPath3D" index="1"]
+transform = Transform3D(0.00179126, 0.0777903, 0.9968, 0.0229485, 0.996508, -0.077813, -0.999567, 0.0230177, -1.62399e-07, 0.433046, 1.68422, 0)
+progress = 9.4223
+
+[node name="PathFollow3D_Node3" parent="TankTrackPath3D" index="2"]
+transform = Transform3D(0.000962568, 0.0417897, 0.998958, 0.0229982, 0.998666, -0.0418019, -0.999568, 0.0230177, 1.94504e-07, 0.253372, 1.69489, 0)
+progress = 9.6023
+
+[node name="PathFollow3D_Node4" parent="TankTrackPath3D" index="3"]
+transform = Transform3D(0.000258139, 0.0112061, 0.999769, 0.0230169, 0.999477, -0.0112093, -0.999567, 0.0230177, 7.54805e-08, 0.073442, 1.69959, 0)
+progress = 9.7823
+
+[node name="PathFollow3D_Node5" parent="TankTrackPath3D" index="4"]
+transform = Transform3D(-0.00324903, -0.029561, 0.99939, -4.78647e-05, 0.999368, 0.0295618, -0.999825, 4.82184e-05, -0.00324903, -0.506546, 1.69845, 0.000171476)
+progress = 0.106559
+
+[node name="PathFollow3D_Node6" parent="TankTrackPath3D" index="5"]
+transform = Transform3D(-0.00918346, -0.08528, 0.996146, -0.00038827, 0.996163, 0.0852823, -0.99979, 0.000396469, -0.00918311, -0.686228, 1.68822, 0.00128177)
+progress = 0.286559
+
+[node name="PathFollow3D_Node7" parent="TankTrackPath3D" index="6"]
+transform = Transform3D(-0.015738, -0.14959, 0.988455, -0.00116227, 0.98855, 0.149595, -0.999708, 0.00120564, -0.0157348, -0.864954, 1.66722, 0.00351505)
+progress = 0.466559
+
+[node name="PathFollow3D_Node8" parent="TankTrackPath3D" index="7"]
+transform = Transform3D(-0.0229683, -0.224252, 0.974086, -0.00253701, 0.974326, 0.22426, -0.999564, 0.00267997, -0.0229521, -1.04173, 1.63374, 0.00698723)
+progress = 0.64656
+
+[node name="PathFollow3D_Node9" parent="TankTrackPath3D" index="8"]
+transform = Transform3D(-0.0308948, -0.311161, 0.949672, -0.00473897, 0.950137, 0.311175, -0.999344, 0.00511396, -0.0308348, -1.21508, 1.58574, 0.0118193)
+progress = 0.82656
+
+[node name="PathFollow3D_Node10" parent="TankTrackPath3D" index="9"]
+transform = Transform3D(-0.0394479, -0.411893, 0.910189, -0.00805742, 0.910975, 0.411922, -0.999022, 0.00891695, -0.0392625, -1.38277, 1.52087, 0.0181228)
+progress = 1.00656
+
+[node name="PathFollow3D_Node11" parent="TankTrackPath3D" index="10"]
+transform = Transform3D(-0.0483787, -0.526601, 0.848527, -0.0128116, 0.849756, 0.526662, -0.998579, 0.0146103, -0.047866, -1.54148, 1.43658, 0.0259677)
+progress = 1.18656
+
+[node name="PathFollow3D_Node12" parent="TankTrackPath3D" index="11"]
+transform = Transform3D(-0.0571377, -0.651845, 0.755957, -0.0192248, 0.757753, 0.651975, -0.998012, 0.0227225, -0.0558388, -1.68644, 1.33059, 0.0353209)
+progress = 1.36656
+
+[node name="PathFollow3D_Node13" parent="TankTrackPath3D" index="12"]
+transform = Transform3D(-0.0648254, -0.77775, 0.624923, -0.0271484, 0.627365, 0.778019, -0.997359, 0.0334744, -0.061796, -1.81135, 1.20177, 0.0459531)
+progress = 1.54656
+
+[node name="PathFollow3D_Node14" parent="TankTrackPath3D" index="13"]
+transform = Transform3D(-0.0704351, -0.887345, 0.455277, -0.0357332, 0.45835, 0.887856, -0.996707, 0.0462743, -0.0640041, -1.90911, 1.05142, 0.0573456)
+progress = 1.72656
+
+[node name="PathFollow3D_Node15" parent="TankTrackPath3D" index="14"]
+transform = Transform3D(-0.0734763, -0.962636, 0.259896, -0.0434881, 0.26344, 0.963516, -0.99618, 0.0595017, -0.0612315, -1.97371, 0.884155, 0.0686968)
+progress = 1.90656
+
+[node name="PathFollow3D_Node16" parent="TankTrackPath3D" index="15"]
+transform = Transform3D(-0.074425, -0.995162, 0.0610286, -0.0490218, 0.0647749, 0.996527, -0.995853, 0.0711848, -0.053616, -2.00248, 0.707085, 0.0790997)
+progress = 2.08656
+
+[node name="PathFollow3D_Node17" parent="TankTrackPath3D" index="16"]
+transform = Transform3D(-0.0743762, -0.989584, -0.121645, -0.0518054, -0.11798, 0.991492, -0.995715, 0.0800565, -0.0424993, -1.99668, 0.527641, 0.0877915)
+progress = 2.26656
+
+[node name="PathFollow3D_Node18" parent="TankTrackPath3D" index="17"]
+transform = Transform3D(-0.0743325, -0.957346, -0.27853, -0.0521579, -0.27518, 0.9598, -0.995699, 0.0858841, -0.0294841, -1.96025, 0.351684, 0.0942892)
+progress = 2.44656
+
+[node name="PathFollow3D_Node19" parent="TankTrackPath3D" index="18"]
+transform = Transform3D(-0.0748696, -0.909389, -0.408687, -0.0507551, -0.405819, 0.912355, -0.995733, 0.089063, -0.0157757, -1.898, 0.182991, 0.0983672)
+progress = 2.62656
+
+[node name="PathFollow3D_Node20" parent="TankTrackPath3D" index="19"]
+transform = Transform3D(-0.0761966, -0.853397, -0.515298, -0.0482471, -0.513025, 0.856811, -0.995757, 0.0901605, -0.0020835, -1.81451, 0.0236592, 0.0999711)
+progress = 2.80656
+
+[node name="PathFollow3D_Node21" parent="TankTrackPath3D" index="20"]
+transform = Transform3D(-0.0783104, -0.784374, -0.615025, -0.0451628, -0.613478, 0.788193, -0.995737, 0.0895126, 0.0126196, -1.71319, -0.124634, 0.099074)
+progress = 2.98656
+
+[node name="PathFollow3D_Node22" parent="TankTrackPath3D" index="21"]
+transform = Transform3D(-0.0809693, -0.676215, -0.731996, -0.0422418, -0.731399, 0.680373, -0.995652, 0.0860222, 0.0306624, -1.59197, -0.257773, 0.0952215)
+progress = 3.16656
+
+[node name="PathFollow3D_Node23" parent="TankTrackPath3D" index="22"]
+transform = Transform3D(-0.0836261, -0.516135, -0.85221, -0.0401898, -0.85274, 0.520428, -0.995519, 0.0777824, 0.0505778, -1.44921, -0.366669, 0.087911)
+progress = 3.34656
+
+[node name="PathFollow3D_Node24" parent="TankTrackPath3D" index="23"]
+transform = Transform3D(-0.084854, -0.314471, -0.945287, -0.0395597, -0.946874, 0.318566, -0.99544, 0.064436, 0.0679186, -1.28677, -0.442562, 0.0771633)
+progress = 3.52656
+
+[node name="PathFollow3D_Node25" parent="TankTrackPath3D" index="24"]
+transform = Transform3D(-0.0830764, -0.113691, -0.989866, -0.039893, -0.9921, 0.117302, -0.995577, 0.0492407, 0.0778995, -1.11184, -0.481415, 0.0639075)
+progress = 3.70656
+
+[node name="PathFollow3D_Node26" parent="TankTrackPath3D" index="25"]
+transform = Transform3D(-0.0778973, 0.0464738, -0.995711, -0.0400202, -0.998056, -0.0434553, -0.99599, 0.0364684, 0.0796216, -0.932701, -0.487299, 0.0496161)
+progress = 3.88657
+
+[node name="PathFollow3D_Node27" parent="TankTrackPath3D" index="26"]
+transform = Transform3D(-0.0697987, 0.155618, -0.985176, -0.0391577, -0.987225, -0.153176, -0.996623, 0.0278896, 0.0750153, -0.754294, -0.468862, 0.0356178)
+progress = 4.06656
+
+[node name="PathFollow3D_Node28" parent="TankTrackPath3D" index="27"]
+transform = Transform3D(-0.0590923, 0.21996, -0.97354, -0.0370752, -0.975032, -0.218058, -0.997396, 0.023212, 0.0657846, -0.578033, -0.434835, 0.0228812)
+progress = 4.24656
+
+[node name="PathFollow3D_Node29" parent="TankTrackPath3D" index="28"]
+transform = Transform3D(-0.0455027, 0.246687, -0.96785, -0.0337801, -0.968656, -0.245316, -0.998225, 0.0215346, 0.0524196, -0.403394, -0.392592, 0.0121767)
+progress = 4.42656
+
+[node name="PathFollow3D_Node30" parent="TankTrackPath3D" index="29"]
+transform = Transform3D(-0.0280424, 0.237964, -0.970692, -0.02938, -0.970827, -0.237159, -0.999007, 0.0218716, 0.0342223, -0.229029, -0.348615, 0.00429433)
+progress = 4.60656
+
+[node name="PathFollow3D_Node31" parent="TankTrackPath3D" index="30"]
+transform = Transform3D(-0.00479262, 0.188853, -0.981819, -0.0242457, -0.98154, -0.188691, -0.999527, 0.0229039, 0.00928482, -0.0533767, -0.309599, 0.000256162)
+progress = 4.78656
+
+[node name="PathFollow3D_Node32" parent="TankTrackPath3D" index="31"]
+transform = Transform3D(-0.00160076, -0.0695077, -0.997412, -0.0229626, -0.997121, 0.069528, -0.999566, 0.0230177, 7.53025e-08, 0.125339, -0.294183, 0)
+progress = 4.96656
+
+[node name="PathFollow3D_Node33" parent="TankTrackPath3D" index="32"]
+transform = Transform3D(-0.00744692, -0.323374, -0.946061, -0.0217804, -0.945784, 0.323469, -0.999566, 0.0230177, -4.13536e-08, 0.300886, -0.331598, 0)
+progress = 5.14656
+
+[node name="PathFollow3D_Node34" parent="TankTrackPath3D" index="33"]
+transform = Transform3D(-0.0102215, -0.443857, -0.895849, -0.0206244, -0.895588, 0.443987, -0.999567, 0.0230178, -3.91588e-08, 0.466193, -0.402502, 0)
+progress = 5.32656
+
+[node name="PathFollow3D_Node35" parent="TankTrackPath3D" index="34"]
+transform = Transform3D(-0.0104669, -0.45451, -0.890485, -0.0205009, -0.890225, 0.454642, -0.999565, 0.0230177, 6.72297e-08, 0.626191, -0.484965, 0)
+progress = 5.50656
+
+[node name="PathFollow3D_Node36" parent="TankTrackPath3D" index="35"]
+transform = Transform3D(-0.00787572, -0.341994, -0.939488, -0.021629, -0.939212, 0.342095, -0.999566, 0.0230177, -4.10663e-08, 0.790145, -0.55898, 0)
+progress = 5.68656
+
+[node name="PathFollow3D_Node37" parent="TankTrackPath3D" index="36"]
+transform = Transform3D(-0.000641546, -0.0278602, -0.999444, -0.0230094, -0.999152, 0.0278683, -0.999567, 0.0230177, -4.36871e-08, 0.965521, -0.595892, 0)
+progress = 5.86656
+
+[node name="PathFollow3D_Node38" parent="TankTrackPath3D" index="37"]
+transform = Transform3D(0.00953576, 0.414081, -0.910001, -0.0209502, -0.909734, -0.414202, -0.999567, 0.0230177, 6.87032e-08, 1.14034, -0.560292, 0)
+progress = 6.04656
+
+[node name="PathFollow3D_Node39" parent="TankTrackPath3D" index="38"]
+transform = Transform3D(0.0157106, 0.682215, -0.730735, -0.0168231, -0.730523, -0.682413, -0.999567, 0.0230177, 5.51689e-08, 1.28779, -0.458423, 0)
+progress = 6.22656
+
+[node name="PathFollow3D_Node40" parent="TankTrackPath3D" index="39"]
+transform = Transform3D(0.0184491, 0.801132, -0.597892, -0.0137648, -0.597717, -0.801367, -0.999565, 0.0230176, 4.51396e-08, 1.40654, -0.323469, 0)
+progress = 6.40656
+
+[node name="PathFollow3D_Node41" parent="TankTrackPath3D" index="40"]
+transform = Transform3D(0.0197849, 0.859129, -0.511012, -0.0117646, -0.510864, -0.859378, -0.999569, 0.0230178, -2.2337e-08, 1.50582, -0.173427, 0)
+progress = 6.58656
+
+[node name="PathFollow3D_Node42" parent="TankTrackPath3D" index="41"]
+transform = Transform3D(0.0205336, 0.891646, -0.451851, -0.0104025, -0.451719, -0.891907, -0.999567, 0.0230176, -7.36158e-08, 1.59218, -0.0155334, 0)
+progress = 6.76656
+
+[node name="PathFollow3D_Node43" parent="TankTrackPath3D" index="42"]
+transform = Transform3D(0.0211401, 0.917988, -0.395565, -0.00910681, -0.395451, -0.918253, -0.999567, 0.0230176, 7.70194e-08, 1.6687, 0.147372, 0)
+progress = 6.94656
+
+[node name="PathFollow3D_Node44" parent="TankTrackPath3D" index="43"]
+transform = Transform3D(0.0217982, 0.946555, -0.321212, -0.00739501, -0.321118, -0.946831, -0.999567, 0.0230178, -1.40406e-08, 1.73354, 0.315234, 0)
+progress = 7.12656
+
+[node name="PathFollow3D_Node45" parent="TankTrackPath3D" index="44"]
+transform = Transform3D(0.0224511, 0.974911, -0.220582, -0.00507839, -0.220517, -0.975197, -0.999567, 0.0230176, 1.21835e-07, 1.78278, 0.48828, 0)
+progress = 7.30656
+
+[node name="PathFollow3D_Node46" parent="TankTrackPath3D" index="45"]
+transform = Transform3D(0.0229405, 0.996158, -0.0821865, -0.001892, -0.0821626, -0.996447, -0.999567, 0.0230178, -1.21161e-07, 1.8107, 0.665955, 0)
+progress = 7.48656
+
+[node name="PathFollow3D_Node47" parent="TankTrackPath3D" index="46"]
+transform = Transform3D(0.0228916, 0.994039, 0.104742, 0.00241139, 0.104711, -0.99433, -0.999565, 0.0230176, -1.70646e-08, 1.80944, 0.845693, 0)
+progress = 7.66656
+
+[node name="PathFollow3D_Node48" parent="TankTrackPath3D" index="47"]
+transform = Transform3D(0.0216934, 0.942011, 0.334303, 0.00769643, 0.334206, -0.942286, -0.999566, 0.0230176, -5.44649e-08, 1.77035, 1.02096, 0)
+progress = 7.84656
+
+[node name="PathFollow3D_Node49" parent="TankTrackPath3D" index="48"]
+transform = Transform3D(0.0190031, 0.82518, 0.564216, 0.0129896, 0.564051, -0.825422, -0.999568, 0.0230177, -2.46627e-08, 1.68901, 1.18098, 0)
+progress = 8.02656
+
+[node name="PathFollow3D_Node50" parent="TankTrackPath3D" index="49"]
+transform = Transform3D(0.015439, 0.670421, 0.741577, 0.0170728, 0.741361, -0.670616, -0.999566, 0.0230177, -1.20818e-07, 1.57045, 1.31585, 0)
+progress = 8.20656
+
+[node name="PathFollow3D_Node51" parent="TankTrackPath3D" index="50"]
+transform = Transform3D(0.0119891, 0.520611, 0.853506, 0.0196496, 0.853256, -0.520764, -0.999568, 0.0230177, -3.73079e-08, 1.42599, 1.4228, 0)
+progress = 8.38657
+
+[node name="PathFollow3D_Node52" parent="TankTrackPath3D" index="51"]
+transform = Transform3D(0.00912309, 0.396154, 0.917951, 0.0211332, 0.917681, -0.396271, -0.999567, 0.0230177, 6.93034e-08, 1.26599, 1.50492, 0)
+progress = 8.56656
+
+[node name="PathFollow3D_Node53" parent="TankTrackPath3D" index="52"]
+transform = Transform3D(0.00686092, 0.297923, 0.954385, 0.0219721, 0.954108, -0.298009, -0.999567, 0.0230177, 7.20541e-08, 1.09714, 1.56706, 0)
+progress = 8.74656
+
+[node name="PathFollow3D_Node54" parent="TankTrackPath3D" index="53"]
+transform = Transform3D(0.00508333, 0.220738, 0.975148, 0.0224501, 0.974861, -0.220803, -0.999569, 0.0230177, -4.26251e-08, 0.923278, 1.61348, 0)
+progress = 8.92656
+
+[node name="PathFollow3D_Node55" type="PathFollow3D" parent="TankTrackPath3D"]
+transform = Transform3D(0.00366848, 0.159295, 0.987054, 0.0227242, 0.986762, -0.159342, -0.999567, 0.0230177, 7.45205e-08, 0.746553, 1.6475, 0)
+progress = 9.10656
+
+[editable path="TankTrackPath3D"]

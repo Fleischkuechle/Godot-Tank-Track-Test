@@ -1,0 +1,336 @@
+[gd_scene load_steps=4 format=3 uid="uid://booipo8r3wlm"]
+
+[ext_resource type="Script" path="res://Cleaned_Tank_Track.gd" id="1_vb8si"]
+[ext_resource type="PackedScene" uid="uid://crothbg7crxno" path="res://BlenderFiles/Tracks.blend" id="2_slunu"]
+
+[sub_resource type="Curve3D" id="Curve3D_minrx"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.361415, 1.19019, -0.938342, 0, 0, 0, 0, 0, 0, 1.6, 0.3, -1.2, 0, 0, 0, 0, 0, 0, 1.18075, -0.845487, -0.118721, 0, 0, 0, 0, 0, 0, -2.1, 0.2, 0.5, 0, 0, 0, 0, 0, 0, -0.653939, 1.97317, -0.871056, 0, 0, 0, 0, 0, 0, 0.104016, 1.84851, -1.20754),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0)
+}
+point_count = 6
+
+[node name="Node3D" type="Path3D"]
+curve = SubResource("Curve3D_minrx")
+script = ExtResource("1_vb8si")
+speed = 0.48
+distance_between_planks = 0.195
+
+[node name="PathFollow3D_Node" type="PathFollow3D" parent="."]
+transform = Transform3D(0.206691, 0.562787, -0.800331, 2.98019e-08, 0.817993, 0.575211, 0.978391, -0.118892, 0.169074, 1.36019, 0.472357, -1.14934)
+progress = 1.251
+
+[node name="Tracks" parent="PathFollow3D_Node" instance=ExtResource("2_slunu")]
+transform = Transform3D(-4.37114e-08, -8.74228e-08, -1, 0, -1, 8.74228e-08, -1, 3.82137e-15, 4.37114e-08, 0, 0, 0)
+
+[node name="PathFollow3D_Node2" type="PathFollow3D" parent="."]
+transform = Transform3D(0.206691, 0.562786, -0.80033, 0, 0.817991, 0.575209, 0.978391, -0.118892, 0.169074, 1.52353, 0.354957, -1.18385)
+progress = 1.446
+
+[node name="Tracks" parent="PathFollow3D_Node2" instance=ExtResource("2_slunu")]
+transform = Transform3D(-4.37114e-08, -8.74228e-08, -1, 0, -1, 8.74228e-08, -1, 3.82137e-15, 4.37114e-08, 0, 0, 0)
+
+[node name="PathFollow3D_Node3" type="PathFollow3D" parent="."]
+transform = Transform3D(-0.0912476, 0.96202, 0.257197, 0.701018, -0.12138, 0.702721, 0.707266, 0.244422, -0.663331, 1.57728, 0.237937, -1.14142)
+progress = 1.641
+
+[node name="Tracks" parent="PathFollow3D_Node3" instance=ExtResource("2_slunu")]
+transform = Transform3D(-4.37114e-08, -8.74228e-08, -1, 0, -1, 8.74228e-08, -1, 3.82137e-15, 4.37114e-08, 0, 0, 0)
+
+[node name="PathFollow3D_Node4" type="PathFollow3D" parent="."]
+transform = Transform3D(-0.0912477, 0.96202, 0.257197, 0.70102, -0.12138, 0.702722, 0.707267, 0.244422, -0.663332, 1.52478, 0.0944798, -1.006)
+progress = 1.836
+
+[node name="Tracks" parent="PathFollow3D_Node4" instance=ExtResource("2_slunu")]
+transform = Transform3D(-4.37114e-08, -8.74228e-08, -1, 0, -1, 8.74228e-08, -1, 3.82137e-15, 4.37114e-08, 0, 0, 0)
+
+[node name="PathFollow3D_Node5" type="PathFollow3D" parent="."]
+transform = Transform3D(-0.0912477, 0.962026, 0.257199, 0.70102, -0.12138, 0.702725, 0.707268, 0.244423, -0.663335, 1.47591, -0.0390437, -0.879961)
+progress = 2.031
+
+[node name="Tracks" parent="PathFollow3D_Node5" instance=ExtResource("2_slunu")]
+transform = Transform3D(-4.37114e-08, -8.74228e-08, -1, 0, -1, 8.74228e-08, -1, 3.82137e-15, 4.37114e-08, 0, 0, 0)
+
+[node name="PathFollow3D_Node6" type="PathFollow3D" parent="."]
+transform = Transform3D(-0.0912475, 0.96202, 0.257198, 0.701018, -0.121379, 0.702723, 0.707265, 0.244422, -0.663333, 1.42556, -0.176612, -0.750103)
+progress = 2.226
+
+[node name="Tracks" parent="PathFollow3D_Node6" instance=ExtResource("2_slunu")]
+transform = Transform3D(-4.37114e-08, -8.74228e-08, -1, 0, -1, 8.74228e-08, -1, 3.82137e-15, 4.37114e-08, 0, 0, 0)
+
+[node name="PathFollow3D_Node7" type="PathFollow3D" parent="."]
+transform = Transform3D(-0.0912474, 0.962024, 0.257197, 0.701018, -0.12138, 0.702721, 0.707265, 0.244423, -0.663331, 1.3753, -0.313934, -0.620479)
+progress = 2.421
+
+[node name="Tracks" parent="PathFollow3D_Node7" instance=ExtResource("2_slunu")]
+transform = Transform3D(-4.37114e-08, -8.74228e-08, -1, 0, -1, 8.74228e-08, -1, 3.82137e-15, 4.37114e-08, 0, 0, 0)
+
+[node name="PathFollow3D_Node8" type="PathFollow3D" parent="."]
+transform = Transform3D(-0.0912477, 0.962029, 0.257198, 0.701018, -0.121381, 0.702723, 0.707265, 0.244424, -0.663333, 1.32498, -0.451421, -0.490698)
+progress = 2.616
+
+[node name="Tracks" parent="PathFollow3D_Node8" instance=ExtResource("2_slunu")]
+transform = Transform3D(-4.37114e-08, -8.74228e-08, -1, 0, -1, 8.74228e-08, -1, 3.82137e-15, 4.37114e-08, 0, 0, 0)
+
+[node name="PathFollow3D_Node9" type="PathFollow3D" parent="."]
+transform = Transform3D(-0.0912469, 0.962028, 0.257198, 0.701013, -0.121381, 0.702723, 0.707261, 0.244424, -0.663333, 1.27497, -0.588062, -0.361717)
+progress = 2.811
+
+[node name="Tracks" parent="PathFollow3D_Node9" instance=ExtResource("2_slunu")]
+transform = Transform3D(-4.37114e-08, -8.74228e-08, -1, 0, -1, 8.74228e-08, -1, 3.82137e-15, 4.37114e-08, 0, 0, 0)
+
+[node name="PathFollow3D_Node10" type="PathFollow3D" parent="."]
+transform = Transform3D(-0.0912476, 0.962029, 0.257197, 0.701019, -0.121381, 0.702721, 0.707267, 0.244424, -0.663331, 1.22433, -0.726429, -0.231105)
+progress = 3.006
+
+[node name="Tracks" parent="PathFollow3D_Node10" instance=ExtResource("2_slunu")]
+transform = Transform3D(-4.37114e-08, -8.74228e-08, -1, 0, -1, 8.74228e-08, -1, 3.82137e-15, 4.37114e-08, 0, 0, 0)
+
+[node name="PathFollow3D_Node11" type="PathFollow3D" parent="."]
+transform = Transform3D(-0.0578888, 0.890946, 0.450369, 0.762259, -0.251865, 0.596242, 0.644661, 0.377814, -0.664566, 1.16586, -0.84379, -0.113526)
+progress = 3.201
+
+[node name="Tracks" parent="PathFollow3D_Node11" instance=ExtResource("2_slunu")]
+transform = Transform3D(-4.37114e-08, -8.74228e-08, -1, 0, -1, 8.74228e-08, -1, 3.82137e-15, 4.37114e-08, 0, 0, 0)
+
+[node name="PathFollow3D_Node12" type="PathFollow3D" parent="."]
+transform = Transform3D(0.345899, 0.0306006, 0.937757, 0.84877, -0.436189, -0.298838, 0.399905, 0.899312, -0.176853, 0.974542, -0.779774, -0.079832)
+progress = 3.396
+
+[node name="Tracks" parent="PathFollow3D_Node12" instance=ExtResource("2_slunu")]
+transform = Transform3D(-4.37114e-08, -8.74228e-08, -1, 0, -1, 8.74228e-08, -1, 3.82137e-15, 4.37114e-08, 0, 0, 0)
+
+[node name="PathFollow3D_Node13" type="PathFollow3D" parent="."]
+transform = Transform3D(0.345898, 0.0306008, 0.937763, 0.848768, -0.436192, -0.29884, 0.399905, 0.899318, -0.176854, 0.793108, -0.721956, -0.0456151)
+progress = 3.591
+
+[node name="Tracks" parent="PathFollow3D_Node13" instance=ExtResource("2_slunu")]
+transform = Transform3D(-4.37114e-08, -8.74228e-08, -1, 0, -1, 8.74228e-08, -1, 3.82137e-15, 4.37114e-08, 0, 0, 0)
+
+[node name="PathFollow3D_Node14" type="PathFollow3D" parent="."]
+transform = Transform3D(0.3459, 0.0306008, 0.937763, 0.848772, -0.436192, -0.29884, 0.399906, 0.899318, -0.176854, 0.611366, -0.66404, -0.0113402)
+progress = 3.786
+
+[node name="Tracks" parent="PathFollow3D_Node14" instance=ExtResource("2_slunu")]
+transform = Transform3D(-4.37114e-08, -8.74228e-08, -1, 0, -1, 8.74228e-08, -1, 3.82137e-15, 4.37114e-08, 0, 0, 0)
+
+[node name="PathFollow3D_Node15" type="PathFollow3D" parent="."]
+transform = Transform3D(0.345898, 0.0306005, 0.937762, 0.848768, -0.43619, -0.29884, 0.399904, 0.899313, -0.176854, 0.427575, -0.60547, 0.0233213)
+progress = 3.981
+
+[node name="Tracks" parent="PathFollow3D_Node15" instance=ExtResource("2_slunu")]
+transform = Transform3D(-4.37114e-08, -8.74228e-08, -1, 0, -1, 8.74228e-08, -1, 3.82137e-15, 4.37114e-08, 0, 0, 0)
+
+[node name="PathFollow3D_Node16" type="PathFollow3D" parent="."]
+transform = Transform3D(0.345899, 0.0306006, 0.937766, 0.848771, -0.43619, -0.298841, 0.399906, 0.899315, -0.176854, 0.245078, -0.547313, 0.0577387)
+progress = 4.176
+
+[node name="Tracks" parent="PathFollow3D_Node16" instance=ExtResource("2_slunu")]
+transform = Transform3D(-4.37114e-08, -8.74228e-08, -1, 0, -1, 8.74228e-08, -1, 3.82137e-15, 4.37114e-08, 0, 0, 0)
+
+[node name="PathFollow3D_Node17" type="PathFollow3D" parent="."]
+transform = Transform3D(0.345898, 0.0306007, 0.93776, 0.848767, -0.436192, -0.298839, 0.399904, 0.899317, -0.176853, 0.0621516, -0.48902, 0.092237)
+progress = 4.371
+
+[node name="Tracks" parent="PathFollow3D_Node17" instance=ExtResource("2_slunu")]
+transform = Transform3D(-4.37114e-08, -8.74228e-08, -1, 0, -1, 8.74228e-08, -1, 3.82137e-15, 4.37114e-08, 0, 0, 0)
+
+[node name="PathFollow3D_Node18" type="PathFollow3D" parent="."]
+transform = Transform3D(0.345898, 0.0306009, 0.937762, 0.848768, -0.436193, -0.29884, 0.399904, 0.89932, -0.176854, -0.120999, -0.430654, 0.126778)
+progress = 4.566
+
+[node name="Tracks" parent="PathFollow3D_Node18" instance=ExtResource("2_slunu")]
+transform = Transform3D(-4.37114e-08, -8.74228e-08, -1, 0, -1, 8.74228e-08, -1, 3.82137e-15, 4.37114e-08, 0, 0, 0)
+
+[node name="PathFollow3D_Node19" type="PathFollow3D" parent="."]
+transform = Transform3D(0.345898, 0.0306008, 0.937763, 0.848768, -0.436192, -0.29884, 0.399904, 0.899317, -0.176854, -0.304083, -0.372311, 0.161306)
+progress = 4.761
+
+[node name="Tracks" parent="PathFollow3D_Node19" instance=ExtResource("2_slunu")]
+transform = Transform3D(-4.37114e-08, -8.74228e-08, -1, 0, -1, 8.74228e-08, -1, 3.82137e-15, 4.37114e-08, 0, 0, 0)
+
+[node name="PathFollow3D_Node20" type="PathFollow3D" parent="."]
+transform = Transform3D(0.345897, 0.0306006, 0.937766, 0.848765, -0.436191, -0.298841, 0.399903, 0.899316, -0.176854, -0.486971, -0.314029, 0.195797)
+progress = 4.956
+
+[node name="Tracks" parent="PathFollow3D_Node20" instance=ExtResource("2_slunu")]
+transform = Transform3D(-4.37114e-08, -8.74228e-08, -1, 0, -1, 8.74228e-08, -1, 3.82137e-15, 4.37114e-08, 0, 0, 0)
+
+[node name="PathFollow3D_Node21" type="PathFollow3D" parent="."]
+transform = Transform3D(0.345899, 0.0306008, 0.937762, 0.84877, -0.436193, -0.29884, 0.399906, 0.89932, -0.176854, -0.670013, -0.255698, 0.230317)
+progress = 5.151
+
+[node name="Tracks" parent="PathFollow3D_Node21" instance=ExtResource("2_slunu")]
+transform = Transform3D(-4.37114e-08, -8.74228e-08, -1, 0, -1, 8.74228e-08, -1, 3.82137e-15, 4.37114e-08, 0, 0, 0)
+
+[node name="PathFollow3D_Node22" type="PathFollow3D" parent="."]
+transform = Transform3D(0.345897, 0.0306007, 0.937763, 0.848765, -0.436192, -0.29884, 0.399903, 0.899318, -0.176854, -0.853063, -0.197365, 0.264839)
+progress = 5.346
+
+[node name="Tracks" parent="PathFollow3D_Node22" instance=ExtResource("2_slunu")]
+transform = Transform3D(-4.37114e-08, -8.74228e-08, -1, 0, -1, 8.74228e-08, -1, 3.82137e-15, 4.37114e-08, 0, 0, 0)
+
+[node name="PathFollow3D_Node23" type="PathFollow3D" parent="."]
+transform = Transform3D(0.345898, 0.0306009, 0.937759, 0.848768, -0.436193, -0.298839, 0.399904, 0.89932, -0.176853, -1.03589, -0.139103, 0.299318)
+progress = 5.541
+
+[node name="Tracks" parent="PathFollow3D_Node23" instance=ExtResource("2_slunu")]
+transform = Transform3D(-4.37114e-08, -8.74228e-08, -1, 0, -1, 8.74228e-08, -1, 3.82137e-15, 4.37114e-08, 0, 0, 0)
+
+[node name="PathFollow3D_Node24" type="PathFollow3D" parent="."]
+transform = Transform3D(0.345897, 0.0306007, 0.937761, 0.848764, -0.43619, -0.298839, 0.399903, 0.899312, -0.176854, -1.21872, -0.0808414, 0.333798)
+progress = 5.736
+
+[node name="Tracks" parent="PathFollow3D_Node24" instance=ExtResource("2_slunu")]
+transform = Transform3D(-4.37114e-08, -8.74228e-08, -1, 0, -1, 8.74228e-08, -1, 3.82137e-15, 4.37114e-08, 0, 0, 0)
+
+[node name="PathFollow3D_Node25" type="PathFollow3D" parent="."]
+transform = Transform3D(0.345898, 0.0306006, 0.937759, 0.848768, -0.436189, -0.298839, 0.399904, 0.899312, -0.176853, -1.40225, -0.0223528, 0.368411)
+progress = 5.931
+
+[node name="Tracks" parent="PathFollow3D_Node25" instance=ExtResource("2_slunu")]
+transform = Transform3D(-4.37114e-08, -8.74228e-08, -1, 0, -1, 8.74228e-08, -1, 3.82137e-15, 4.37114e-08, 0, 0, 0)
+
+[node name="PathFollow3D_Node26" type="PathFollow3D" parent="."]
+transform = Transform3D(0.345899, 0.0306008, 0.937761, 0.848771, -0.436192, -0.298839, 0.399906, 0.899318, -0.176854, -1.58427, 0.0356515, 0.402738)
+progress = 6.126
+
+[node name="Tracks" parent="PathFollow3D_Node26" instance=ExtResource("2_slunu")]
+transform = Transform3D(-4.37114e-08, -8.74228e-08, -1, 0, -1, 8.74228e-08, -1, 3.82137e-15, 4.37114e-08, 0, 0, 0)
+
+[node name="Tracks" parent="PathFollow3D_Node26/Tracks" instance=ExtResource("2_slunu")]
+transform = Transform3D(-4.37114e-08, -8.74228e-08, -1, 0, -1, 8.74228e-08, -1, 3.82137e-15, 4.37114e-08, 0, 0, 0)
+
+[node name="PathFollow3D_Node27" type="PathFollow3D" parent="."]
+transform = Transform3D(0.345898, 0.0306006, 0.937764, 0.848768, -0.436191, -0.29884, 0.399904, 0.899317, -0.176854, -1.76277, 0.0925352, 0.436402)
+progress = 6.321
+
+[node name="Tracks" parent="PathFollow3D_Node27" instance=ExtResource("2_slunu")]
+transform = Transform3D(-4.37114e-08, -8.74228e-08, -1, 0, -1, 8.74228e-08, -1, 3.82137e-15, 4.37114e-08, 0, 0, 0)
+
+[node name="PathFollow3D_Node28" type="PathFollow3D" parent="."]
+transform = Transform3D(0.345899, 0.0306006, 0.937763, 0.84877, -0.43619, -0.29884, 0.399905, 0.899315, -0.176854, -1.95031, 0.152297, 0.471769)
+progress = 6.516
+
+[node name="Tracks" parent="PathFollow3D_Node28" instance=ExtResource("2_slunu")]
+transform = Transform3D(-4.37114e-08, -8.74228e-08, -1, 0, -1, 8.74228e-08, -1, 3.82137e-15, 4.37114e-08, 0, 0, 0)
+
+[node name="PathFollow3D_Node29" type="PathFollow3D" parent="."]
+transform = Transform3D(0.644289, -0.371282, 0.668592, 0.657226, -0.178218, -0.732302, 0.391051, 0.911242, 0.129194, -2.09632, 0.220546, 0.48863)
+progress = 6.711
+
+[node name="Tracks" parent="PathFollow3D_Node29" instance=ExtResource("2_slunu")]
+transform = Transform3D(-4.37114e-08, -8.74228e-08, -1, 0, -1, 8.74228e-08, -1, 3.82137e-15, 4.37114e-08, 0, 0, 0)
+
+[node name="PathFollow3D_Node30" type="PathFollow3D" parent="."]
+transform = Transform3D(0.706445, -0.454993, -0.542118, -0.029343, 0.746472, -0.664749, 0.707143, 0.485519, 0.514, -1.97642, 0.351532, 0.382832)
+progress = 6.906
+
+[node name="Tracks" parent="PathFollow3D_Node30" instance=ExtResource("2_slunu")]
+transform = Transform3D(-4.37114e-08, -8.74228e-08, -1, 0, -1, 8.74228e-08, -1, 3.82137e-15, 4.37114e-08, 0, 0, 0)
+
+[node name="PathFollow3D_Node31" type="PathFollow3D" parent="."]
+transform = Transform3D(0.706445, -0.454992, -0.542118, -0.0293429, 0.746469, -0.664749, 0.707143, 0.485517, 0.514, -1.86826, 0.484155, 0.280285)
+progress = 7.101
+
+[node name="Tracks" parent="PathFollow3D_Node31" instance=ExtResource("2_slunu")]
+transform = Transform3D(-4.37114e-08, -8.74228e-08, -1, 0, -1, 8.74228e-08, -1, 3.82137e-15, 4.37114e-08, 0, 0, 0)
+
+[node name="PathFollow3D_Node32" type="PathFollow3D" parent="."]
+transform = Transform3D(0.706442, -0.454992, -0.542115, -0.0293428, 0.74647, -0.664745, 0.70714, 0.485518, 0.513997, -1.76395, 0.612072, 0.181377)
+progress = 7.296
+
+[node name="Tracks" parent="PathFollow3D_Node32" instance=ExtResource("2_slunu")]
+transform = Transform3D(-4.37114e-08, -8.74228e-08, -1, 0, -1, 8.74228e-08, -1, 3.82137e-15, 4.37114e-08, 0, 0, 0)
+
+[node name="PathFollow3D_Node33" type="PathFollow3D" parent="."]
+transform = Transform3D(0.706443, -0.454994, -0.542117, -0.0293429, 0.746473, -0.664748, 0.707141, 0.48552, 0.513998, -1.65843, 0.74146, 0.0813304)
+progress = 7.491
+
+[node name="Tracks" parent="PathFollow3D_Node33" instance=ExtResource("2_slunu")]
+transform = Transform3D(-4.37114e-08, -8.74228e-08, -1, 0, -1, 8.74228e-08, -1, 3.82137e-15, 4.37114e-08, 0, 0, 0)
+
+[node name="PathFollow3D_Node34" type="PathFollow3D" parent="."]
+transform = Transform3D(0.706441, -0.454991, -0.542118, -0.0293428, 0.746469, -0.664749, 0.707139, 0.485517, 0.514, -1.55266, 0.871147, -0.0189465)
+progress = 7.686
+
+[node name="Tracks" parent="PathFollow3D_Node34" instance=ExtResource("2_slunu")]
+transform = Transform3D(-4.37114e-08, -8.74228e-08, -1, 0, -1, 8.74228e-08, -1, 3.82137e-15, 4.37114e-08, 0, 0, 0)
+
+[node name="PathFollow3D_Node35" type="PathFollow3D" parent="."]
+transform = Transform3D(0.706445, -0.454991, -0.542116, -0.0293429, 0.746469, -0.664747, 0.707143, 0.485517, 0.513997, -1.44679, 1.00097, -0.119325)
+progress = 7.881
+
+[node name="PathFollow3D_Node36" type="PathFollow3D" parent="."]
+transform = Transform3D(0.706442, -0.454991, -0.542117, -0.0293428, 0.746468, -0.664748, 0.70714, 0.485517, 0.513998, -1.34104, 1.13065, -0.219597)
+progress = 8.076
+
+[node name="PathFollow3D_Node37" type="PathFollow3D" parent="."]
+transform = Transform3D(0.706444, -0.454995, -0.542119, -0.0293428, 0.746476, -0.664751, 0.707142, 0.485522, 0.514001, -1.23531, 1.26029, -0.319843)
+progress = 8.271
+
+[node name="PathFollow3D_Node38" type="PathFollow3D" parent="."]
+transform = Transform3D(0.706444, -0.454992, -0.542116, -0.0293429, 0.746469, -0.664746, 0.707142, 0.485517, 0.513997, -1.12945, 1.3901, -0.420214)
+progress = 8.466
+
+[node name="PathFollow3D_Node39" type="PathFollow3D" parent="."]
+transform = Transform3D(0.706445, -0.454992, -0.542115, -0.029343, 0.746469, -0.664746, 0.707143, 0.485517, 0.513997, -1.02358, 1.51991, -0.520587)
+progress = 8.661
+
+[node name="PathFollow3D_Node40" type="PathFollow3D" parent="."]
+transform = Transform3D(0.706442, -0.454995, -0.542116, -0.0293428, 0.746476, -0.664746, 0.70714, 0.485522, 0.513997, -0.919035, 1.64811, -0.619711)
+progress = 8.856
+
+[node name="PathFollow3D_Node41" type="PathFollow3D" parent="."]
+transform = Transform3D(0.706447, -0.454995, -0.54212, -0.029343, 0.746476, -0.664751, 0.707145, 0.485522, 0.514001, -0.812038, 1.77931, -0.721157)
+progress = 9.051
+
+[node name="PathFollow3D_Node42" type="PathFollow3D" parent="."]
+transform = Transform3D(0.706445, -0.454993, -0.542119, -0.029343, 0.746472, -0.66475, 0.707143, 0.485519, 0.514, -0.706825, 1.90989, -0.821481)
+progress = 9.246
+
+[node name="PathFollow3D_Node43" type="PathFollow3D" parent="."]
+transform = Transform3D(0.476823, 0.00345091, -0.878982, -0.149207, 0.985778, -0.0770706, 0.86623, 0.167899, 0.470567, -0.567379, 1.96104, -0.910246)
+progress = 9.441
+
+[node name="PathFollow3D_Node44" type="PathFollow3D" parent="."]
+transform = Transform3D(0.381366, 0.194029, -0.903821, -0.145356, 0.978135, 0.14865, 0.912906, 0.0746862, 0.401239, -0.390616, 1.92986, -0.987955)
+progress = 9.636
+
+[node name="PathFollow3D_Node45" type="PathFollow3D" parent="."]
+transform = Transform3D(0.381368, 0.194028, -0.903822, -0.145356, 0.978131, 0.148651, 0.912911, 0.0746859, 0.40124, -0.212334, 1.90054, -1.0671)
+progress = 9.831
+
+[node name="PathFollow3D_Node46" type="PathFollow3D" parent="."]
+transform = Transform3D(0.381368, 0.194028, -0.903822, -0.145356, 0.978133, 0.148651, 0.912911, 0.074686, 0.40124, -0.0366248, 1.87164, -1.1451)
+progress = 10.026
+
+[node name="PathFollow3D_Node47" type="PathFollow3D" parent="."]
+transform = Transform3D(0.206691, 0.562785, -0.800332, 0, 0.81799, 0.575211, 0.978392, -0.118892, 0.169075, 0.383694, 1.17418, -0.943049)
+progress = 0.0389137
+
+[node name="PathFollow3D_Node48" type="PathFollow3D" parent="."]
+transform = Transform3D(0.206691, 0.562789, -0.800331, 2.98019e-08, 0.817994, 0.575211, 0.978391, -0.118892, 0.169074, 0.549497, 1.05501, -0.978075)
+progress = 0.233913
+
+[node name="PathFollow3D_Node49" type="PathFollow3D" parent="."]
+transform = Transform3D(0.206691, 0.562786, -0.800326, 2.9802e-08, 0.81799, 0.575207, 0.978394, -0.118892, 0.169073, 0.703578, 0.944272, -1.01063)
+progress = 0.428913
+
+[node name="PathFollow3D_Node50" type="PathFollow3D" parent="."]
+transform = Transform3D(0.206691, 0.562784, -0.800331, 2.9802e-08, 0.817987, 0.575211, 0.978395, -0.118891, 0.169074, 0.860684, 0.831358, -1.04382)
+progress = 0.623913
+
+[node name="PathFollow3D_Node51" type="PathFollow3D" parent="."]
+transform = Transform3D(0.206691, 0.562786, -0.80033, 0, 0.817991, 0.57521, 0.978393, -0.118892, 0.169074, 1.01694, 0.719052, -1.07683)
+progress = 0.818913
+
+[node name="PathFollow3D_Node52" type="PathFollow3D" parent="."]
+transform = Transform3D(0.206691, 0.562782, -0.800329, -2.9802e-08, 0.817986, 0.575209, 0.978395, -0.118891, 0.169074, 1.17355, 0.606498, -1.10991)
+progress = 1.01391
+
+[node name="PathFollow3D_Node53" type="PathFollow3D" parent="."]
+transform = Transform3D(0.206691, 0.562785, -0.800332, 0, 0.81799, 0.575211, 0.978395, -0.118892, 0.169075, 1.32902, 0.494757, -1.14275)
+progress = 1.20891
+
+[connection signal="curve_changed" from="." to="." method="_on_curve_changed"]
